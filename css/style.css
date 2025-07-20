@@ -10,6 +10,16 @@ body {
   background: #f4f4f4;
   color: #333;
 }
+.product-list {
+  list-style: square;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.product-list li {
+  margin-bottom: 0.5rem;
+}
 
 header {
   background: #003366;
