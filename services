@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <!-- Bootstrap CDN for responsive layout -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" /> <!-- Optional custom styles -->
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-primary text-white py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="index.html" class="d-flex align-items-center text-white text-decoration-none">
+      <img src="images/GSolved.png" alt="PowerCo Logo" style="height: 40px;" class="me-2" />
+      <h1 class="h4 mb-0">PowerCo</h1>
+    </a>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+  <section>
+    <h2 class="mb-4">Our Services</h2>
+    <p>
+      <strong>PowerCo</strong> offers a range of cost-saving solutions tailored to the needs of utility companies. These services span from strategic product sourcing to comprehensive warehouse and material management. By leveraging its buying power, supply chain expertise, and advanced technology platforms, PowerCo helps utility partners reduce overhead, streamline operations, and improve overall efficiency.
+    </p>
+
+    <h3 class="mt-5">Key Benefits of PowerCo’s Material Management Solutions</h3>
+    <ul>
+      <li>Reduction in internal personnel and overhead</li>
+      <li>Increased inventory turnover</li>
+      <li>Lower inventory carrying costs</li>
+      <li>Electronic order and invoicing systems</li>
+      <li>Job kitting and jobsite deliveries</li>
+      <li>Emergency preparedness action plans</li>
+      <li>Full access to PowerCo’s extensive inventory</li>
+    </ul>
+
+    <p>
+      With one of the largest regional inventories in the industry, <strong>PowerCo</strong> is also a proud member of the North American Association of Utility Distributors (NAAUD), offering customers access to over $400 million in inventory through a network of trusted NAAUD partners.
+    </p>
+
+    <h3 class="mt-5">Additional Services PowerCo Provides to Utilities</h3>
+    <ul>
+      <li>Inventory Management Solutions</li>
+      <li>Custom Packaging Solutions</li>
+      <li>24/7 Emergency Response Services</li>
+      <li>System Integration and Automation Solutions</li>
+    </ul>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-4">
+  <div class="mb-2">
+    <a href="#" class="text-white me-3">Privacy Policy</a>
+    <a href="#" class="text-white me-3">Cookie Notice</a>
+    <a href="#" class="text-white me-3">Terms of Use</a>
+    <a href="#" class="text-white">Change Cookie Settings</a>
+  </div>
+  <p class="mb-1">&copy; 2025 PowerCo. All rights reserved.</p>
+  <p class="footer-note mb-0">Minority-Owned Business | Women-Owned Business</p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
