@@ -246,4 +246,22 @@ footer {
   margin-top: 0.5rem;
   color: #ddd;
 }
+.mission {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+  border-left: 5px solid #003366;
+  border-radius: 4px;
+}
+
+.mission h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.mission p {
+  line-height: 1.6;
+  color: #333;
+}
 
