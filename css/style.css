@@ -167,3 +167,55 @@ nav ul.main-nav li {
   height: 50px;
   width: auto;
 }
+/* Header layout */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  background-color: #003366;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+/* Navigation styling (you may already have this) */
+nav ul.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul.main-nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul.main-nav li a:hover {
+  color: #ddd;
+}
+
+/* Dropdown fixes (if needed) */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #003366;
+  min-width: 250px;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
