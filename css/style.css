@@ -151,3 +151,8 @@ nav ul.main-nav li {
   background-color: #00509e;
 }
 
+.footer-note {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
