@@ -10,16 +10,31 @@ body {
   background: #f4f4f4;
   color: #333;
 }
-.product-list {
-  list-style: square;
-  padding-left: 2rem;
-  font-size: 1.1rem;
-  margin-top: 1rem;
+.product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
-.product-list li {
-  margin-bottom: 0.5rem;
+.product-link {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 250px;
 }
+
+.product-link:hover {
+  background-color: #00509e;
+}
+
 
 header {
   background: #003366;
