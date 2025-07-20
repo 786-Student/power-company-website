@@ -156,3 +156,14 @@ nav ul.main-nav li {
   margin-top: 0.5rem;
   color: #ddd;
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
