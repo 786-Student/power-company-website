@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suppliers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #004085;
+    }
+    nav {
+      background-color: #004085;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    ul.nav {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    ul.nav li {
+      margin: 0;
+    }
+    ul.nav li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 3px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    ul.nav li a:hover {
+      background-color: #003366;
+    }
+    ul.nav li a.active, ul.nav li a[aria-current="page"] {
+      background-color: #00254d;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .letter-group {
+      margin-bottom: 2rem;
+    }
+    .letter-group h2 {
+      color: #0069d9;
+      border-bottom: 2px solid #0069d9;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    li {
+      padding: 3px 0;
+    }
+    /* Responsive columns for small screens */
+    @media (max-width: 600px) {
+      ul {
+        columns: 1;
+      }
+      nav ul.nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Suppliers</h1>
+
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="letter-group">
+      <h2>A</h2>
+      <ul>
+        <li>3M COMPANY</li>
+        <li>ABB INSTALLATION PRODUCTS, INC.</li>
+        <li>ACP INTERNATIONAL</li>
+        <li>ACTION MANUFACTURING</li>
+        <li>ACUITY LIGHTING GROUP</li>
+        <li>ADSCO LINE PRODUCTS</li>
+        <li>ADVANCED PEDESTALS</li>
+        <li>ADVANCED RUBBER PRODUCTS</li>
+        <li>AFL TELECOMMUNICATIONS</li>
+        <li>ALAN WIRE</li>
+        <li>ALLIANCE COMPOSITES INC.</li>
+        <li>ALLIED TUBE & CONDUIT</li>
+        <li>ALMETEK INDUSTRIES INC.</li>
+        <li>ALUMA-FORM</li>
+        <li>AMERICAN CASTING & MANUFACTURING</li>
+        <li>AMERICAN SAFETY UTILITY</li>
+        <li>AMERON</li>
+        <li>AMETEK POWER INSTRUMENTS</li>
+        <li>ANDAX ENVIRONMENTAL</li>
+        <li>APS</li>
+        <li>ARLINGTON INDUSTRIES</li>
+        <li>ARMORCAST PRODUCTS COMPANY</li>
+        <li>AWG</li>
+        <li>ATKORE INTERNATIONAL</li>
+      </ul>
+    </div>
+
+    <!-- Add other letters here -->
+
+  </section>
+</body>
+</html>
