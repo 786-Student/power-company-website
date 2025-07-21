@@ -3,87 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PowerCo - About Us</title>
-
-  <!-- Bootstrap 5 CDN -->
+  <title>PowerCo - Suppliers</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Your custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="text-white custom-header">
-  <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/GSolved.png" alt="GSolved Logo" style="height: 40px;" class="me-2" />
-      <span class="fs-4 fw-bold">PowerCo</span>
-    </a>
-    <button class="navbar-toggler border-0 bg-white text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      ☰
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="about.html">About Us</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Low Voltage Products and Systems</a></li>
-            <li><a class="dropdown-item" href="#">Residential and Small Business</a></li>
-            <li><a class="dropdown-item" href="#">Industrial Automation and Control</a></li>
-            <li><a class="dropdown-item" href="#">Building Automation and Control</a></li>
-            <li><a class="dropdown-item" href="#">MV Distribution and Grid Automation</a></li>
-            <li><a class="dropdown-item" href="#">Critical Power, Cooling and Racks</a></li>
-            <li><a class="dropdown-item" href="#">Solar & Energy Storage</a></li>
-            <li><a class="dropdown-item" href="#">Master Ranges</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link text-white" href="suppliers.html">Suppliers</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-  <section>
-    <h1>Suppliers</h1>
-    <div class="letter-group">
+  <!-- Modern Sticky Header -->
+  <header class="main-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/GSolved.png" alt="GSolved Logo" class="logo me-2" />
+        <span class="fs-4 fw-bold">PowerCo</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Low Voltage</a></li>
+              <li><a class="dropdown-item" href="#">Industrial Automation</a></li>
+              <li><a class="dropdown-item" href="#">Solar & Energy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="suppliers.html">Suppliers</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <h1 class="mb-4 text-center text-dark">Approved Suppliers</h1>
+    <section class="letter-group">
       <h2>A</h2>
-      <ul>
-        <li>3M COMPANY</li>
-        <li>ABB INSTALLATION PRODUCTS, INC.</li>
-        <li>ACP INTERNATIONAL</li>
-        <li>ACTION MANUFACTURING</li>
-        <li>ACUITY LIGHTING GROUP</li>
-        <li>ADSCO LINE PRODUCTS</li>
-        <li>ADVANCED PEDESTALS</li>
-        <li>ADVANCED RUBBER PRODUCTS</li>
-        <li>AFL TELECOMMUNICATIONS</li>
-        <li>ALAN WIRE</li>
-        <li>ALLIANCE COMPOSITES INC.</li>
-        <li>ALLIED TUBE & CONDUIT</li>
-        <li>ALMETEK INDUSTRIES INC.</li>
-        <li>ALUMA-FORM</li>
-        <li>AMERICAN CASTING & MANUFACTURING</li>
-        <li>AMERICAN SAFETY UTILITY</li>
-        <li>AMERON</li>
-        <li>AMETEK POWER INSTRUMENTS</li>
-        <li>ANDAX ENVIRONMENTAL</li>
-        <li>APS</li>
-        <li>ARLINGTON INDUSTRIES</li>
-        <li>ARMORCAST PRODUCTS COMPANY</li>
-        <li>AWG</li>
-        <li>ATKORE INTERNATIONAL</li>
+      <ul class="list-group">
+        <li class="list-group-item">3M COMPANY</li>
+        <li class="list-group-item">ABB INSTALLATION PRODUCTS, INC.</li>
+        <li class="list-group-item">ACP INTERNATIONAL</li>
+        <li class="list-group-item">ACTION MANUFACTURING</li>
+        <!-- Add more as needed -->
       </ul>
-    </div>
+    </section>
+  </main>
 
-    <!-- Add other letters here -->
-
-  </section>
-<section class="contact-info-nav py-3 py-md-4 bg-light">
-
-  <div class="container">
-    <div class="info-container">
+  <section class="contact-info-nav py-4 bg-light border-top">
+    <div class="container info-container">
       <div class="info">
         <h5>Address</h5>
         <p>5900 Balcones Drive #9299 Austin, TX 78731</p>
@@ -101,26 +71,25 @@
         <p><a href="mailto:info@GridSolved.com">info@GridSolved.com</a></p>
       </div>
     </div>
-      <nav class="bottom-nav mb-3 d-flex flex-wrap gap-3">
+    <div class="bottom-nav text-center mt-3">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
-    </nav>
-  </div>
-</section>
- <footer class="text-white text-center py-4">
-  <div class="mb-2">
-    <a href="#" class="text-white me-3">Privacy Policy</a>
-    <a href="#" class="text-white me-3">Cookie Notice</a>
-    <a href="#" class="text-white me-3">Terms of Use</a>
-    <a href="#" class="text-white">Change Your Cookie Settings</a>
-  </div>
-  <p class="mb-1">&copy; 2025 PowerCo. All rights reserved.</p>
-  <p class="footer-note mb-0">Minority-Owned Business | Women-Owned Business</p>
-</footer>
+    </div>
+  </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="main-footer">
+    <div class="footer-links mb-2">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Settings</a>
+    </div>
+    <p>&copy; 2025 PowerCo. All rights reserved.</p>
+    <p class="footer-note">Minority-Owned Business | Women-Owned Business</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
