@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background: #003366;
+  background-color: #001f3f; /* Updated to darkest blue */
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -23,7 +23,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2rem;
-  background-color: #003366;
+  background-color: #001f3f; /* Match footer */
 }
 
 .logo-container {
@@ -66,7 +66,7 @@ nav ul li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #003366;
+  background-color: #001f3f;
   min-width: 250px;
   z-index: 1000;
   padding: 0;
@@ -121,7 +121,7 @@ form input, form textarea {
 
 button {
   padding: 0.7rem;
-  background-color: #003366;
+  background-color: #001f3f;
   color: white;
   border: none;
   cursor: pointer;
@@ -143,7 +143,7 @@ button:hover {
 .product-link {
   display: inline-block;
   padding: 1rem 1.5rem;
-  background-color: #003366;
+  background-color: #001f3f;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -162,12 +162,12 @@ button:hover {
   margin: 3rem auto;
   padding: 1rem 2rem;
   background-color: #f4f4f4;
-  border-left: 5px solid #003366;
+  border-left: 5px solid #001f3f;
   border-radius: 4px;
 }
 
 .mission h2 {
-  color: #003366;
+  color: #001f3f;
   margin-bottom: 1rem;
 }
 
