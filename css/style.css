@@ -276,16 +276,16 @@ footer {
 
 .info-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* or center if you prefer */
-  max-width: 100px;
-  margin: 0 auto 1.5rem auto;
-  gap: 0rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
   padding: 0 1rem;
 }
 
 .info {
-  flex: 1 1 200px;
+  flex: 1 1 220px;
   min-width: 200px;
 }
 
