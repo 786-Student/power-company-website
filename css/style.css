@@ -37,6 +37,19 @@ body {
   color: var(--link-hover);
 }
 
+/* === Highlight "Get a Quote" Nav Link === */
+.navbar-nav .nav-link.quote-highlight {
+  background-color: #ffffff;
+  color: var(--jet-blue);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link.quote-highlight:hover {
+  background-color: #f4f4f4;
+  color: var(--jet-blue);
+}
+
 /* === Main Section Titles === */
 main h1 {
   color: var(--jet-blue);
