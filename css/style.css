@@ -10,31 +10,6 @@ body {
   background: #f4f4f4;
   color: #333;
 }
-.product-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
-  justify-content: center;
-}
-
-.product-link {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  background-color: #003366;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  text-align: center;
-  min-width: 250px;
-}
-
-.product-link:hover {
-  background-color: #00509e;
-}
-
 
 header {
   background: #003366;
@@ -43,15 +18,32 @@ header {
   text-align: center;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  background-color: #003366;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 95px;
+  width: 95px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   padding: 0;
-}
-
-nav ul li {
-  margin: 0 15px;
+  gap: 1.5rem;
 }
 
 nav ul li a {
@@ -62,6 +54,41 @@ nav ul li a {
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #ddd;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003366;
+  min-width: 250px;
+  z-index: 1000;
+  padding: 0;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  border-bottom: 1px solid #004080;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #00509e;
 }
 
 main {
@@ -105,147 +132,31 @@ button:hover {
   background-color: #00509e;
 }
 
-footer {
-  background: #003366;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
+.product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 2rem;
-}
-/* Submenu styling */
-nav ul.main-nav {
-  position: relative;
+  justify-content: center;
 }
 
-nav ul.main-nav li {
-  position: relative;
-}
-
-.has-submenu .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+.product-link {
+  display: inline-block;
+  padding: 1rem 1.5rem;
   background-color: #003366;
-  padding: 0;
-  min-width: 250px;
-  z-index: 1000;
-}
-
-.has-submenu:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  border-bottom: 1px solid #004080;
-}
-
-.submenu li a {
-  display: block;
-  padding: 0.75rem 1rem;
   color: white;
   text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 250px;
 }
 
-.submenu li a:hover {
+.product-link:hover {
   background-color: #00509e;
 }
 
-.footer-note {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: #ddd;
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-}
-/* Header layout */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
-  background-color: #003366;
-}
-
-.logo {
-  height: 95px;
-  width: 95px;
-}
-
-/* Navigation styling (you may already have this) */
-nav ul.main-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav ul.main-nav li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-nav ul.main-nav li a:hover {
-  color: #ddd;
-}
-
-/* Dropdown fixes (if needed) */
-.has-submenu {
-  position: relative;
-}
-
-.has-submenu .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  background-color: #003366;
-  min-width: 250px;
-  z-index: 1000;
-}
-
-.has-submenu:hover .submenu {
-  display: block;
-}
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #212529; 
-  color: white;
-}
-
-.footer-links {
-  margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-  color: #ddd;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-.footer-note {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: #ddd;
-}
 .mission {
   max-width: 800px;
   margin: 3rem auto;
@@ -289,7 +200,8 @@ footer {
   min-width: 200px;
 }
 
-.info h3 {
+.info h3,
+.info h5 {
   margin-bottom: 0.3rem;
   color: #004085;
 }
@@ -315,10 +227,40 @@ footer {
   color: #fff;
 }
 
-/* Responsive layout */
+/* === Footer === */
+footer {
+  background-color: #001f3f; /* Darkest blue */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #ddd;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
+
+/* === Responsive layout === */
 @media (max-width: 576px) {
   .contact-info-nav {
-    padding: 1rem 1rem !important; /* Reduce vertical padding */
+    padding: 1rem 1rem !important;
   }
 
   .info-container {
@@ -332,7 +274,7 @@ footer {
 
   .bottom-nav {
     gap: 0.5rem;
-    margin-bottom: 0; /* Remove extra space below nav */
+    margin-bottom: 0;
     justify-content: center;
   }
 }
