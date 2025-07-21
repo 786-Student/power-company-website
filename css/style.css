@@ -69,7 +69,7 @@ main h1 {
   font-weight: 500;
 }
 
-/* === Get a Quote Form === */
+/* === Quote Form === */
 form.quote-form {
   max-width: 900px;
   margin: 0 auto;
@@ -134,21 +134,6 @@ form.quote-form button.btn-primary:hover {
   padding: 0 1rem;
 }
 
-/* === Bottom Nav === */
-.bottom-nav a {
-  color: #004085;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.bottom-nav a:hover {
-  color: #fff;
-  background-color: #004085;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
 /* === Footer === */
 .main-footer {
   background-color: var(--jet-blue);
@@ -171,6 +156,51 @@ form.quote-form button.btn-primary:hover {
 .footer-note {
   font-size: 0.9rem;
   color: #aaa;
+}
+
+/* === Bottom Nav === */
+.bottom-nav a {
+  color: #004085;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bottom-nav a:hover {
+  color: #fff;
+  background-color: #004085;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* === Animation Styles === */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-slide-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pulse Hover for Buttons */
+.pulse-hover {
+  transition: transform 0.3s ease;
+}
+
+.pulse-hover:hover {
+  animation: pulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
 
 /* === Responsive Layout === */
