@@ -12,7 +12,7 @@
   <header class="main-header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/GSolved.png" alt="PowerCo Logo" class="logo me-2" />
+        <img src="images/GSolved.png" alt="Grid Solved Logo" class="logo me-2" />
         <span class="fs-4 fw-bold">Grid Solved</span>
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,22 +31,22 @@
   </header>
 
   <!-- Animated Hero Section -->
-  <section class="animated-hero py-5 text-center">
-    <div class="container">
-      <h1 class="display-5 fw-bold headline-animated">Welcome to Grid Solved</h1>
-      <p class="lead mt-3 headline-animated">Your Goals Drive Us — With Reliable Equipment, Dedicated Service, and On-Time Delivery.</p>
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container text-center hero-content">
+      <h1 class="hero-title">Welcome to Grid Solved</h1>
+      <p class="hero-subtitle">Your Goals Drive Us — With Reliable Equipment, Dedicated Service, and On-Time Delivery.</p>
+      <a href="quote.html" class="btn btn-primary btn-lg pulse-hover mt-4">Request a Quote</a>
     </div>
   </section>
 
   <!-- Main Content -->
   <main class="container py-5">
-    <!-- Welcome Banner -->
     <section class="text-center mb-5">
-      <h1 class="text-dark mb-3">Welcome to Grid Solved</h1>
+      <h2 class="text-dark mb-3">Welcome to Grid Solved</h2>
       <p class="lead">Your Goals Drive Us — With Reliable Equipment, Dedicated Service, and On-Time Delivery.</p>
     </section>
 
-    <!-- Highlights Section -->
     <section class="bg-white p-4 p-md-5 shadow-sm rounded mb-5">
       <h2 class="headline fw-bold mb-3 text-center">
         High-Voltage Equipment, On-Time Delivery & Strategic Procurement Solutions
@@ -69,7 +69,7 @@
     </section>
   </main>
 
-  <!-- Call to Action Section -->
+  <!-- CTA Section -->
   <section class="py-5 bg-primary text-white text-center fade-slide-up" id="cta-section">
     <div class="container">
       <h3 class="mb-3">Get in touch with our team</h3>
@@ -109,7 +109,7 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Intersection Observer for Animation -->
+  <!-- Fade-in on scroll -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const animatedEls = document.querySelectorAll(".fade-slide-up");
