@@ -3,28 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grid Solved – About Us</title>
+  <title>Grid Solved – Services</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Animation styles */
+    .fade-slide-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-slide-up.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pulse-hover {
+      transition: transform 0.3s ease;
+    }
+
+    .pulse-hover:hover {
+      animation: pulse 0.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.05);
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Sticky Header -->
+
+  <!-- Header / Navbar -->
   <header class="main-header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/GSolved.png" alt="PowerCo Logo" class="logo me-2" />
+        <img src="images/GSolved.png" alt="PowerCo Logo" style="height: 40px;" class="me-2" />
         <span class="fs-4 fw-bold">Grid Solved</span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler border-0 bg-white text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        ☰
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="suppliers.html">Suppliers</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link quote-highlight" href="quote.html">Get a Quote</a></li>
         </ul>
       </div>
@@ -33,78 +68,125 @@
 
   <!-- Main Content -->
   <main class="container py-5">
-    <h1 class="text-center text-dark mb-5">About Us</h1>
-    <section class="about-section">
-      <div class="mb-5">
-        <h2 class="section-headline">Our Mission</h2>
-        <p>
-          At Grid Solved, we specialize in the supply and strategic procurement of high-voltage and low-voltage materials for utility, industrial, and infrastructure projects.
-          Our mission is to deliver reliable, schedule-aligned solutions that meet the demands of critical power systems and construction timelines.
-        </p>
-      </div>
+    <section>
+      <h2 class="mb-4">Our Services</h2>
+      <p>
+        <strong>At Grid Solved,</strong> we go beyond supplying high-voltage materials. We deliver integrated services designed to support utility, industrial, and infrastructure projects from planning to delivery. Our expertise spans equipment supply, procurement strategy, project management, and cybersecurity — all delivered with a strong commitment to schedule, quality, and client satisfaction.
+      </p>
 
-      <div class="mb-4 bg-white p-4 shadow-sm rounded">
-        <h3 class="text-primary fw-semibold"><i class="fas fa-box-open me-2"></i>What We Offer</h3>
-        <p>
-          We provide a wide range of high-quality materials — including transformers, HV/LV breakers, capacitor banks, instrument transformers, switches, steel,
-          transmission line materials, and insulators — all sourced from trusted global manufacturers.
-        </p>
-        <p>
-          But we go far beyond supply. Our team works closely with clients to identify long lead-time materials, coordinate with qualified vendors, and manage
-          procurement with transparency and precision.
-        </p>
-      </div>
+      <h3 class="mt-5">Key Benefits of Our Material Management Solutions</h3>
+      <ul>
+        <li>Reduction in internal personnel and overhead</li>
+        <li>Increased inventory turnover</li>
+        <li>Lower inventory carrying costs</li>
+        <li>Electronic order and invoicing systems</li>
+        <li>Job kitting and jobsite deliveries</li>
+        <li>Emergency preparedness action plans</li>
+        <li>Access to PowerCo’s extensive inventory</li>
+      </ul>
 
-      <div class="mb-4 bg-white p-4 shadow-sm rounded">
-        <h3 class="text-primary fw-semibold"><i class="fas fa-people-carry-box me-2"></i>End-to-End Support</h3>
-        <p>
-          From single orders to large-scale project support, we offer real-time tracking, clear communication, and dedicated service from inquiry to delivery.
-          Our project managers help align material logistics with site activities — reducing delays and improving efficiency.
-        </p>
-      </div>
+      <h3 class="mt-5">Additional Services We Provide</h3>
+      <ul>
+        <li>Inventory Management Solutions</li>
+        <li>Custom Packaging Solutions</li>
+        <li>24/7 Emergency Response Services</li>
+        <li>System Integration and Automation Solutions</li>
+      </ul>
 
-      <div class="mb-4 bg-white p-4 shadow-sm rounded">
-        <h3 class="text-primary fw-semibold"><i class="fas fa-shield-alt me-2"></i>Cybersecurity in Energy</h3>
-        <p>
-          In today’s increasingly connected environment, we support our partners with grid-focused cybersecurity services to protect critical infrastructure and digital assets.
-        </p>
-      </div>
+      <!-- New Service Section -->
+      <h3 class="mt-5">Comprehensive Service Offerings</h3>
 
-      <div class="p-4 bg-primary text-white rounded text-center">
-        <h4 class="fw-bold">Built on Three Core Principles:</h4>
-        <p class="mb-0"><strong>Reliable materials. Responsive service. Results delivered on schedule.</strong></p>
+      <div class="row gy-4 mt-3">
+        <div class="col-md-6">
+          <h5>🔌 High-Voltage Equipment Supply</h5>
+          <p>
+            We supply a comprehensive range of high-voltage and low-voltage materials — including transformers, breakers (HV/LV), capacitor banks, instrument transformers, switches, steel structures, transmission line materials, insulators, and more. All materials are sourced from trusted global manufacturers and comply with the highest industry standards.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h5>📦 Procurement & Sourcing Support</h5>
+          <p>
+            Our team works closely with clients to manage the procurement process end-to-end. We assist in technical validation, supplier engagement, and pricing strategy. When facing long lead-time challenges, we help identify qualified vendors with feasible delivery timelines to keep your project on track without compromising on specifications or quality.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h5>📅 Schedule-Driven Delivery Coordination</h5>
+          <p>
+            We understand how critical timelines are in power and infrastructure projects. That’s why our logistics and delivery processes are structured around your project milestones. We provide proactive delivery tracking, real-time updates, and clear communication to ensure materials arrive when and where they’re needed.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h5>📍 Project Management for Substation & Transmission Projects</h5>
+          <p>
+            From early-stage planning through to material coordination and delivery, we support substation and transmission line projects with practical, schedule-focused project management. We help align supply timelines with site activities to reduce delays, simplify interfaces, and improve execution efficiency.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h5>🛡 Cybersecurity Services & Solutions</h5>
+          <p>
+            As the grid becomes more connected, securing critical infrastructure is essential. We offer cybersecurity services tailored for utilities and energy systems — including network hardening, compliance advisory, vendor risk management, and cyber threat assessments — to help protect your operations and digital assets.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h5>🤝 Dedicated Client Service</h5>
+          <p>
+            Customer service is central to everything we do. From your first inquiry to final delivery, our team stays engaged, responsive, and proactive. We align closely with your expectations, communicate clearly throughout, and remain committed to delivering the right materials — on time and as promised.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Contact Info + Bottom Nav -->
-  <section class="contact-info-nav py-4 bg-light border-top">
-    <div class="container info-container d-flex flex-wrap justify-content-between">
-      <div class="info"><h5>Address</h5><p>5900 Balcones Drive #9299 Austin, TX 78731</p></div>
-      <div class="info"><h5>Hours</h5><p>M-F / 8 AM – 5 PM</p></div>
-      <div class="info"><h5>Phone</h5><p>(832) 778‑3200</p></div>
-      <div class="info"><h5>Email</h5><p><a href="mailto:info@GridSolved.com">info@GridSolved.com</a></p></div>
-    </div>
-    <div class="bottom-nav text-center mt-3">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
+  <!-- Call to Action Section with Animation -->
+  <section class="py-5 bg-primary text-white text-center fade-slide-up" id="cta-section">
+    <div class="container">
+      <h3 class="mb-3">Get in touch with our team</h3>
+      <p class="lead mb-4">We’ll take it from there.</p>
+      <a href="contact.html" class="btn btn-light btn-lg pulse-hover">Contact Us</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="main-footer">
-    <div class="footer-links mb-2">
+  <footer class="main-footer text-center py-4">
+    <div class="mb-2 footer-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Cookie Notice</a>
       <a href="#">Terms of Use</a>
-      <a href="#">Cookie Settings</a>
+      <a href="#">Change Cookie Settings</a>
     </div>
-    <p>&copy; 2025 PowerCo. All rights reserved.</p>
-    <p class="footer-note">Minority‑Owned & Women‑Owned Business</p>
+    <p class="mb-1">&copy; 2025 PowerCo. All rights reserved.</p>
+    <p class="footer-note mb-0">Minority-Owned Business | Women-Owned Business</p>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Animation Trigger Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedEl = document.querySelector(".fade-slide-up");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (animatedEl) {
+        observer.observe(animatedEl);
+      }
+    });
+  </script>
 </body>
 </html>
