@@ -62,6 +62,22 @@ main h1 {
   color: var(--jet-blue);
 }
 
+/* === Custom Headline Class === */
+.section-headline {
+  color: var(--jet-blue);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-headline {
+    font-size: 2rem;
+  }
+}
+
+/* === List Group === */
 .list-group-item {
   border: none;
   background-color: #fff;
@@ -185,7 +201,7 @@ form.quote-form button.btn-primary:hover {
   transform: translateY(0);
 }
 
-/* Pulse Hover for Buttons */
+/* === Pulse Hover for Buttons === */
 .pulse-hover {
   transition: transform 0.3s ease;
 }
