@@ -108,6 +108,33 @@ ul.benefits-list li {
   margin-bottom: 0.75rem;
 }
 
+/* ===== About Page Mission Box ===== */
+.mission-box {
+  background-color: #fefefe;
+  border-left: 5px solid var(--accent-blue);
+  padding: 2rem;
+  background-image: linear-gradient(to right, #ffffff, #f5f9ff);
+}
+
+.mission-box .section-headline {
+  color: var(--jet-blue);
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.mission-box .highlight {
+  background-color: #e6f0ff;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #004085;
+}
+
+.mission-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 /* ===== Call to Action Section ===== */
 #cta-section {
   background-color: var(--jet-blue);
@@ -150,7 +177,7 @@ ul.benefits-list li {
   color: #aaa;
 }
 
-/* ===== Bottom Nav Links (if used) ===== */
+/* ===== Bottom Nav Links ===== */
 .bottom-nav a {
   color: var(--accent-blue);
   margin: 0 0.5rem;
@@ -217,28 +244,4 @@ ul.benefits-list li {
   .service-section {
     padding: 1.5rem;
   }
-}
-
-/* ===== Enhanced Core Principles Section ===== */
-.about-section > div.bg-primary {
-  background: linear-gradient(135deg, #002851, #003366);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  margin-top: 2rem;
-}
-
-.about-section > div.bg-primary h4 {
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
-  color: #e0e7ff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-.about-section > div.bg-primary p {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #cbd5e1;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
