@@ -37,7 +37,6 @@ body {
   color: var(--link-hover);
 }
 
-/* === Highlight "Get a Quote" Nav Link === */
 .navbar-nav .nav-link.quote-highlight {
   background-color: #ffffff;
   color: var(--jet-blue);
@@ -50,19 +49,7 @@ body {
   color: var(--jet-blue);
 }
 
-/* === Main Section Titles === */
-main h1 {
-  color: var(--jet-blue);
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.letter-group h2 {
-  margin-top: 2rem;
-  color: var(--jet-blue);
-}
-
-/* === Custom Headline Class === */
+/* === Section Headline === */
 .section-headline {
   color: var(--jet-blue);
   font-size: 1.75rem;
@@ -77,54 +64,24 @@ main h1 {
   }
 }
 
-/* === List Group === */
-.list-group-item {
-  border: none;
-  background-color: #fff;
-  padding: 0.75rem 1rem;
-  font-weight: 500;
+/* === About Page Enhancements === */
+.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
 }
 
-/* === Quote Form === */
-form.quote-form {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+.about-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
-form.quote-form .form-label {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.about-section .text-primary {
+  color: var(--jet-blue) !important;
 }
 
-form.quote-form .form-control,
-form.quote-form textarea {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.5rem;
-}
-
-form.quote-form .form-control:focus,
-form.quote-form textarea:focus {
-  border-color: var(--jet-blue);
-  box-shadow: 0 0 0 0.2rem rgba(0, 31, 63, 0.25);
-}
-
-form.quote-form button.btn-primary {
-  background-color: var(--jet-blue);
-  border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-form.quote-form button.btn-primary:hover {
-  background-color: var(--link-hover);
+.about-section .shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
 }
 
 /* === Contact Section === */
@@ -227,10 +184,6 @@ form.quote-form button.btn-primary:hover {
 
   .navbar-brand span {
     font-size: 1.25rem;
-  }
-
-  form.quote-form {
-    padding: 1.5rem 1rem;
   }
 
   .bottom-nav {
