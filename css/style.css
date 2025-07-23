@@ -137,7 +137,7 @@ ul.benefits-list li {
 
 /* ===== Hero Section ===== */
 .animated-hero {
-  background: url('../images/GSolved.png') no-repeat center center/cover;
+  background: url('../images/HomePage-1.png') no-repeat center center/cover;
   position: relative;
   z-index: 0;
   animation: bgMove 30s ease-in-out infinite alternate;
