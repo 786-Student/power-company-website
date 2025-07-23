@@ -22,8 +22,9 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link active" href="suppliers.html">Suppliers</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+         
           <li class="nav-item"><a class="nav-link quote-highlight" href="quote.html">Get a Quote</a></li>
         </ul>
       </div>
@@ -44,24 +45,21 @@
     </section>
   </main>
 
+<!-- Call to Action Section -->
+  <section class="py-5 bg-primary text-white text-center fade-slide-up" id="cta-section">
+    <div class="container">
+      <h3 class="mb-3">Get in touch with our team</h3>
+      <p class="lead mb-4">We’ll take it from there.</p>
+      <a href="contact.html" class="btn btn-light btn-lg pulse-hover">Contact Us</a>
+    </div>
+  </section>
+ <!-- Contact Info + Bottom Nav -->
   <section class="contact-info-nav py-4 bg-light border-top">
-    <div class="container info-container">
-      <div class="info">
-        <h5>Address</h5>
-        <p>5900 Balcones Drive #9299 Austin, TX 78731</p>
-      </div>
-      <div class="info">
-        <h5>Hours</h5>
-        <p>M - F / 8:00AM - 5:00PM</p>
-      </div>
-      <div class="info">
-        <h5>Phone</h5>
-        <p>(832) 778-3200</p>
-      </div>
-      <div class="info">
-        <h5>Email</h5>
-        <p><a href="mailto:info@GridSolved.com">info@GridSolved.com</a></p>
-      </div>
+    <div class="container info-container d-flex flex-wrap justify-content-between">
+      <div class="info"><h5>Address</h5><p>5900 Balcones Drive Ste 100, Austin, TX 78731 US</p></div>
+      <div class="info"><h5>Hours</h5><p>M-F / 8 AM – 5 PM</p></div>
+      <div class="info"><h5>Phone</h5><p>(832) 778‑3200</p></div>
+      <div class="info"><h5>Email</h5><p><a href="mailto:info@GridSolved.com">info@GridSolved.com</a></p></div>
     </div>
     <div class="bottom-nav text-center mt-3">
       <a href="index.html">Home</a>
@@ -70,17 +68,43 @@
       <a href="contact.html">Contact Us</a>
     </div>
   </section>
-
-  <footer class="main-footer">
-    <div class="footer-links mb-2">
+  <!-- Footer -->
+  <footer class="main-footer text-center py-4">
+    <div class="mb-2 footer-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Cookie Notice</a>
       <a href="#">Terms of Use</a>
-      <a href="#">Cookie Settings</a>
+      <a href="#">Change Cookie Settings</a>
     </div>
-    <p>&copy; 2025 PowerCo. All rights reserved.</p>
-    <p class="footer-note">Minority-Owned Business | Women-Owned Business</p>
+    <p class="mb-1">&copy; 2025 Grid Solved. All rights reserved.</p>
+    <p class="footer-note mb-0">Minority-Owned Business | Women-Owned Business</p>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Animation Trigger -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedEl = document.querySelector(".fade-slide-up");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (animatedEl) {
+        observer.observe(animatedEl);
+      }
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
