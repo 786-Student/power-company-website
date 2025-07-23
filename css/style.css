@@ -1,3 +1,4 @@
+/* ===== Root Colors ===== */
 :root {
   --jet-blue: #001f3f;
   --link-hover: #3399ff;
@@ -132,6 +133,39 @@ ul.benefits-list li {
 .mission-box p {
   font-size: 1.1rem;
   line-height: 1.7;
+}
+
+/* ===== Hero Section ===== */
+.animated-hero {
+  background: url('../images/HomePage-1.png') no-repeat center center/cover;
+  position: relative;
+  z-index: 0;
+  animation: bgMove 30s ease-in-out infinite alternate;
+  color: white;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: center 10%;
+  }
+}
+
+/* ===== Headline Animation ===== */
+.headline-animated {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== Call to Action Section ===== */
