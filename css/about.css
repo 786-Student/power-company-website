@@ -1,0 +1,99 @@
+/* ===== About Page Specific Styles ===== */
+
+body.about-page {
+  background-color: #f9fafb; /* Very light gray background */
+  color: #2c3e50; /* Dark blue-gray text for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  padding: 2rem 1rem;
+}
+
+/* Main container for about content */
+.about-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff; /* White card background */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2.5rem;
+}
+
+/* Headings */
+.about-container h1,
+.about-container h2 {
+  color: #1a2a44; /* Darker, deeper blue */
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.about-container h1 {
+  font-size: 2.8rem;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* Paragraphs */
+.about-container p {
+  font-size: 1.125rem;
+  color: #3b4a63;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Links inside about content */
+.about-container a {
+  color: #1e90ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.about-container a:hover {
+  color: #0d6efd;
+}
+
+/* Lists */
+.about-container ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-container ul li {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+/* Images in About */
+.about-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+  }
+}
