@@ -182,3 +182,29 @@ body.suppliers-page {
     font-size: 1rem;
   }
 }
+/* Supplier Logo Styling */
+.supplier-logo {
+  width: 40px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 12px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.2s ease;
+  border-radius: 4px;
+}
+
+.supplier-logo:hover {
+  filter: none;
+  transform: scale(1.05);
+}
+
+/* Ensure list-group items are flex aligned */
+ul.list-group .list-group-item.supplier-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
