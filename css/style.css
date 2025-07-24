@@ -43,21 +43,30 @@ body {
 
 /* ===== "Get a Quote" Navigation Tab Styling ===== */
 .navbar-nav .nav-item.quote-highlight {
-  background-color: var(--quote-bg);
-  border-radius: 5px;
-  font-weight: 700;
-  margin-left: 1rem;
-  transition: background-color 0.3s ease;
+  margin-left: 0; /* Remove margin-left to avoid misalignment */
 }
 
 .navbar-nav .nav-item.quote-highlight .nav-link {
+  background-color: var(--quote-bg);
+  border-radius: 5px;
+  font-weight: 700;
   color: white !important;
-  padding: 0.5rem 1.25rem;
+  padding: 0.45rem 1.3rem; /* Vertical padding adjusted for alignment */
+  display: flex;           /* Flexbox for vertical centering */
+  align-items: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
-.navbar-nav .nav-item.quote-highlight:hover {
+.navbar-nav .nav-item.quote-highlight .nav-link:hover,
+.navbar-nav .nav-item.quote-highlight .nav-link.active {
   background-color: var(--quote-bg-hover);
   color: white !important;
+}
+
+/* Add consistent horizontal spacing between nav items */
+.navbar-nav > .nav-item:not(:last-child) {
+  margin-right: 1rem;
 }
 
 /* ===== Hero Section ===== */
@@ -230,6 +239,15 @@ ul.benefits-list li {
 }
 
 /* ===== Responsive Adjustments ===== */
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-item.quote-highlight .nav-link {
+    justify-content: center;  /* Center text on smaller screens */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .navbar-brand span {
     font-size: 1.25rem;
