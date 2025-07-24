@@ -8,13 +8,19 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-   <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
   <!-- Hero Section -->
   <section class="animated-hero d-flex align-items-center justify-content-center text-center">
     <div class="container">
-      <h1 class="display-5 fw-bold headline-animated">High-Voltage Equipment, On-Time Delivery & Strategic Procurement</h1>
-      <p class="lead mt-3 headline-animated">Built for Performance. Delivered with Precision.</p>
+      <div class="hero-text-box">
+        <h1 class="display-5 fw-bold headline-animated">
+          High-Voltage Equipment, On-Time Delivery & Strategic Procurement
+        </h1>
+        <p class="lead mt-3 subheadline-animated">
+          Built for Performance. Delivered with Precision.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -43,6 +49,7 @@
     </section>
   </main>
 
+  <!-- CTA Section -->
   <section id="cta-section" class="text-center fade-slide-up">
     <div class="container">
       <h3 class="mb-3">Ready to Power Your Next Project?</h3>
@@ -50,34 +57,8 @@
       <a href="contact.html" class="btn btn-light btn-lg pulse-hover">Contact Us</a>
     </div>
   </section>
+
   <div id="footer-placeholder"></div>
-
- 
-
-  <!-- Animation Trigger -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const animatedEl = document.querySelector(".fade-slide-up");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-
-      if (animatedEl) {
-        observer.observe(animatedEl);
-      }
-    });
-  </script>
-  <script src="js/common.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Scroll Animation -->
   <script>
@@ -95,5 +76,8 @@
       });
     });
   </script>
+
+  <script src="js/common.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
