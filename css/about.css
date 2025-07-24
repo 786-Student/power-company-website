@@ -15,7 +15,12 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.about-header-img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 /* About page body background and font tweaks */
 body.about-page {
   background-color: #f9fbff; /* subtle off-white */
