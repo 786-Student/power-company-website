@@ -8,27 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header class="main-header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/GSolved.png" alt="Grid Solved Logo" class="logo me-2" />
-        <span class="fs-4 fw-bold">Grid Solved</span>
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="suppliers.html">Suppliers</a></li>
-          <li class="nav-item"><a class="nav-link quote-highlight" href="quote.html">Get a Quote</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+   <div id="header-placeholder"></div>
 
   <!-- Hero Section -->
   <section class="animated-hero d-flex align-items-center justify-content-center text-center">
@@ -46,8 +26,8 @@
         ⚡ Powering Your Projects with Precision & Reliability
       </h2>
       <p class="lead text-center mb-4 text-dark">
-        At <strong>Grid Solved</strong>, we specialize in the supply and procurement of high-voltage equipment for utility, industrial, and infrastructure sectors.
-        Our expertise enables on-schedule delivery of critical equipment — tailored to <strong>complex project and operational demands</strong>.
+        At <strong>Grid Solved</strong>, we specialize in supplying and procuring high-voltage equipment for utility, industrial, and infrastructure sectors.
+        Our expertise enables on-schedule delivery of critical equipment, tailored to <strong>complex project and operational demands</strong>.
       </p>
       <div class="row">
         <div class="col-lg-10 mx-auto">
@@ -63,7 +43,6 @@
     </section>
   </main>
 
-  <!-- Call to Action -->
   <section id="cta-section" class="text-center fade-slide-up">
     <div class="container">
       <h3 class="mb-3">Ready to Power Your Next Project?</h3>
@@ -71,36 +50,33 @@
       <a href="contact.html" class="btn btn-light btn-lg pulse-hover">Contact Us</a>
     </div>
   </section>
+  <div id="footer-placeholder"></div>
 
-  <!-- Contact Info + Bottom Nav -->
-  <section class="contact-info-nav py-4 bg-light border-top">
-    <div class="container info-container d-flex flex-wrap justify-content-between">
-      <div class="info"><h5>Address</h5><p>5900 Balcones Drive Ste 100, Austin, TX 78731 US</p></div>
-      <div class="info"><h5>Hours</h5><p>Mon–Fri / 8 AM–5 PM</p></div>
-      <div class="info"><h5>Phone</h5><p>(832) 778‑3200</p></div>
-      <div class="info"><h5>Email</h5><p><a href="mailto:info@GridSolved.com">info@GridSolved.com</a></p></div>
-    </div>
-    <div class="bottom-nav text-center mt-3">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </section>
+ 
 
-  <!-- Footer -->
-  <footer class="main-footer text-center py-4">
-    <div class="mb-2 footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Notice</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Cookie Settings</a>
-    </div>
-    <p class="mb-1">&copy; 2025 Grid Solved. All rights reserved.</p>
-    <p class="footer-note mb-0">Minority-Owned Business</p>
-  </footer>
+  <!-- Animation Trigger -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedEl = document.querySelector(".fade-slide-up");
 
-  <!-- Bootstrap JS -->
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (animatedEl) {
+        observer.observe(animatedEl);
+      }
+    });
+  </script>
+  <script src="js/common.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Scroll Animation -->
