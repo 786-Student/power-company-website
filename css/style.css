@@ -20,6 +20,9 @@
   display: block;
   max-height: 8vh;
 }
+.main-header {
+  background-color: var(--jet-blue);
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
