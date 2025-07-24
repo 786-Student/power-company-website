@@ -5,8 +5,8 @@
   --light-gray: #f4f4f4;
   --text-dark: #333;
   --accent-blue: #004085;
-  --quote-bg: #004085; /* Slightly lighter blue for quote button */
-  --quote-bg-hover: #003366; /* Darker blue on hover */
+  --quote-bg: #004085;
+  --quote-bg-hover: #003366;
 }
 
 /* ===== Reset & Base Styles ===== */
@@ -14,6 +14,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 .logo {
   height: 45px;
@@ -28,43 +34,31 @@
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
-
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: var(--link-hover);
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light-gray);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
 /* ===== "Get a Quote" Navigation Tab Styling ===== */
 .navbar-nav .nav-item.quote-highlight {
-  margin-left: 0; /* Remove margin-left to avoid misalignment */
+  margin-left: 0;
 }
-
 .navbar-nav .nav-item.quote-highlight .nav-link {
   background-color: var(--quote-bg);
   border-radius: 5px;
   font-weight: 700;
   color: white !important;
-  padding: 0.45rem 1.3rem; /* Vertical padding adjusted for alignment */
-  display: flex;           /* Flexbox for vertical centering */
+  padding: 0.45rem 1.3rem;
+  display: flex;
   align-items: center;
   white-space: nowrap;
   transition: background-color 0.3s ease;
 }
-
 .navbar-nav .nav-item.quote-highlight .nav-link:hover,
 .navbar-nav .nav-item.quote-highlight .nav-link.active {
   background-color: var(--quote-bg-hover);
   color: white !important;
 }
-
-/* Add consistent horizontal spacing between nav items */
 .navbar-nav > .nav-item:not(:last-child) {
   margin-right: 1rem;
 }
@@ -82,7 +76,6 @@ body {
   text-align: center;
   animation: bgMove 30s ease-in-out infinite alternate;
 }
-
 .animated-hero::before {
   content: "";
   position: absolute;
@@ -90,15 +83,13 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.55); /* Overlay for contrast */
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
-
 .animated-hero .container {
   position: relative;
   z-index: 2;
 }
-
 .hero-text-box {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
@@ -106,7 +97,6 @@ body {
   display: inline-block;
   max-width: 850px;
 }
-
 @keyframes bgMove {
   0% {
     background-position: center;
@@ -123,17 +113,14 @@ body {
   transform: translateY(30px);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
-
 .headline-animated {
   animation: fadeSlideUp 1s ease-out forwards;
   animation-delay: 0.5s;
 }
-
 .subheadline-animated {
   animation: fadeSlideUp 1.3s ease-out forwards;
   animation-delay: 1s;
 }
-
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
@@ -147,12 +134,10 @@ body {
   color: white;
   padding: 3rem 1rem;
 }
-
 #cta-section h3 {
   font-size: 1.75rem;
   font-weight: 700;
 }
-
 #cta-section .btn {
   font-weight: bold;
   padding: 0.75rem 2rem;
@@ -166,18 +151,15 @@ body {
   text-align: center;
   padding: 2rem 1rem;
 }
-
 .footer-links a {
   color: #ccc;
   margin: 0 1rem;
   text-decoration: none;
 }
-
 .footer-links a:hover {
   color: white;
   text-decoration: underline;
 }
-
 .footer-note {
   font-size: 0.9rem;
   color: #aaa;
@@ -192,17 +174,14 @@ main h1,
   text-align: center;
   margin-bottom: 2rem;
 }
-
 main p {
   font-size: 1.05rem;
   margin-bottom: 1rem;
 }
-
 ul.benefits-list {
   padding-left: 1.5rem;
   margin-bottom: 2rem;
 }
-
 ul.benefits-list li {
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -214,7 +193,6 @@ ul.benefits-list li {
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 .fade-slide-up.animate {
   opacity: 1;
   transform: translateY(0);
@@ -224,11 +202,9 @@ ul.benefits-list li {
 .pulse-hover {
   transition: transform 0.3s ease;
 }
-
 .pulse-hover:hover {
   animation: pulse 0.6s ease-in-out infinite alternate;
 }
-
 @keyframes pulse {
   from {
     transform: scale(1);
@@ -240,27 +216,27 @@ ul.benefits-list li {
 
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 767.98px) {
-  /* Left align the collapsed navbar container */
+  /* Collapse nav: align left and stack links */
   #navbarNav {
+    display: flex !important;
+    flex-direction: column;
     justify-content: flex-start !important;
   }
 
-  /* Make nav links fill width for proper text alignment */
   #navbarNav .nav-link {
     width: 100%;
-  }
-
-  /* Add some padding to nav items for spacing */
-  .navbar-nav .nav-item {
     padding-left: 0.5rem;
   }
 
-  /* Align the quote-highlight nav link text left */
+  .navbar-nav .nav-item {
+    margin-bottom: 0.25rem;
+  }
+
   .navbar-nav .nav-item.quote-highlight .nav-link {
     justify-content: flex-start;
+    font-size: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-size: 1rem;
   }
 }
 
