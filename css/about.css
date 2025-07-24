@@ -1,99 +1,149 @@
 /* ===== About Page Specific Styles ===== */
 
+/* Ensure header/footer full width and background color spans entire viewport */
+.main-header, .main-footer {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  background-color: var(--jet-blue); /* match your main header/footer color */
+}
+
+/* Keep container padding inside header/footer for content alignment */
+.main-header .container,
+.main-footer .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* About page body background and font tweaks */
 body.about-page {
-  background-color: #f9fafb; /* Very light gray background */
-  color: #2c3e50; /* Dark blue-gray text for better readability */
+  background-color: #f9fbff; /* subtle off-white */
+  color: #222; /* slightly darker text for readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
-  padding: 2rem 1rem;
 }
 
-/* Main container for about content */
-.about-container {
-  max-width: 900px;
-  margin: 2rem auto;
-  background: #ffffff; /* White card background */
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  padding: 3rem 2.5rem;
+/* Main content container override for about page if needed */
+.about-page main.container {
+  max-width: 1140px; /* Bootstrap lg container width */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-/* Headings */
-.about-container h1,
-.about-container h2 {
-  color: #1a2a44; /* Darker, deeper blue */
+/* Section headline styling */
+.section-headline {
+  font-size: 1.9rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
-  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--jet-blue);
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: 0.3rem;
 }
 
-.about-container h1 {
-  font-size: 2.8rem;
+/* Highlighted text spans */
+.highlight {
+  color: var(--accent-blue);
+  font-weight: 600;
 }
 
-.about-container h2 {
-  font-size: 2rem;
-  margin-top: 2.5rem;
-}
-
-/* Paragraphs */
-.about-container p {
-  font-size: 1.125rem;
-  color: #3b4a63;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.02em;
-}
-
-/* Links inside about content */
-.about-container a {
-  color: #1e90ff;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-}
-
-.about-container a:hover {
-  color: #0d6efd;
-}
-
-/* Lists */
-.about-container ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.about-container ul li {
-  margin-bottom: 0.6rem;
-  font-weight: 500;
-}
-
-/* Images in About */
-.about-container img {
-  max-width: 100%;
-  height: auto;
+/* About section boxes */
+.about-section > div {
+  background-color: white;
   border-radius: 8px;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .about-container {
-    padding: 2rem 1.5rem;
+.about-section > div:hover {
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
+}
+
+/* Mission box with subtle different background */
+.mission-box {
+  background-color: #e8f0fe;
+  border-left: 6px solid var(--accent-blue);
+  padding-left: 1.5rem;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.05);
+  margin-bottom: 2.5rem;
+}
+
+/* Icons in headlines */
+.about-section h2 i,
+.about-section h3 i {
+  color: #ffb700; /* warm yellow for icons */
+}
+
+/* Text primary color adjustments */
+.text-primary {
+  color: var(--accent-blue) !important;
+  font-weight: 700;
+}
+
+/* Core principles section with gradient background and shadows */
+.core-principles-section,
+.p-4.bg-primary.text-white.rounded.text-center {
+  background: linear-gradient(135deg, #e0f0ff 0%, #f7fbff 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: var(--jet-blue);
+}
+
+.core-principles-section h4,
+.p-4.bg-primary.text-white.rounded.text-center h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--jet-blue);
+}
+
+.core-principles-section p,
+.p-4.bg-primary.text-white.rounded.text-center p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: var(--jet-blue);
+}
+
+/* CTA Section overrides to better fit about page */
+#cta-section {
+  background-color: var(--jet-blue);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+}
+
+/* Responsive tweaks for small devices */
+@media (max-width: 767.98px) {
+  .about-section > div {
+    padding: 1rem 1rem;
   }
 
-  .about-container h1 {
-    font-size: 2.2rem;
+  .mission-box {
+    padding-left: 1rem;
   }
 
-  .about-container h2 {
-    font-size: 1.6rem;
+  .section-headline {
+    font-size: 1.5rem;
   }
 
-  .about-container p {
-    font-size: 1rem;
+  .core-principles-section,
+  .p-4.bg-primary.text-white.rounded.text-center {
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section > div {
+    padding: 0.75rem 0.75rem;
+  }
+
+  .section-headline {
+    font-size: 1.25rem;
   }
 }
