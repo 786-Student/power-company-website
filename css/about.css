@@ -2,11 +2,17 @@
 
 /* Ensure header/footer full width and background color spans entire viewport */
 .main-header, .main-footer {
-  width: 100%;
+  width: 100vw; /* full viewport width */
   padding-left: 0;
   padding-right: 0;
   margin: 0;
   background-color: var(--jet-blue); /* match your main header/footer color */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: 1000;
 }
 
 /* Keep container padding inside header/footer for content alignment */
@@ -16,25 +22,15 @@
   padding-right: 15px;
 }
 
-/* Image right after About Us heading - limit max width & center */
-.about-header-img {
-  max-width: 600px;   /* Limit large image width */
-  width: 100%;       /* Responsive */
-  height: auto;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto 2rem auto; /* Vertical spacing + center */
-  display: block;
-}
-
 /* About page body background and font tweaks */
 body.about-page {
-  background-color: #f9fbff; /* subtle off-white */
+  background-color: #e8effb; /* slightly deeper subtle off-white */
   color: #222; /* slightly darker text for readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.55;
 }
 
-/* Main content container override for about page */
+/* Main content container override for about page if needed */
 .about-page main.container {
   max-width: 1140px; /* Bootstrap lg container width */
   padding-top: 3rem;
@@ -61,15 +57,14 @@ body.about-page {
 .about-section > div {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   transition: box-shadow 0.3s ease;
 }
 
-/* Hover effect for about section boxes */
 .about-section > div:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
 }
 
 /* Mission box with subtle different background */
@@ -77,7 +72,7 @@ body.about-page {
   background-color: #e8f0fe;
   border-left: 6px solid var(--accent-blue);
   padding-left: 1.5rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.05);
   margin-bottom: 2.5rem;
 }
 
@@ -96,13 +91,12 @@ body.about-page {
 /* Core principles section with gradient background and shadows */
 .core-principles-section,
 .p-4.bg-primary.text-white.rounded.text-center {
-  background: linear-gradient(135deg, #e0f0ff 0%, #f7fbff 100%);
+  background: linear-gradient(135deg, #c8ddff 0%, #dff4ff 100%);
   padding: 2rem 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   color: var(--jet-blue);
-  text-align: center;
 }
 
 .core-principles-section h4,
@@ -120,6 +114,19 @@ body.about-page {
   color: var(--jet-blue);
 }
 
+/* Updated About page header image styles */
+.about-header-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 0 auto 2.5rem auto; /* centered with margin below */
+  object-fit: cover;
+}
+
 /* CTA Section overrides to better fit about page */
 #cta-section {
   background-color: var(--jet-blue);
@@ -127,7 +134,27 @@ body.about-page {
   padding: 3rem 1rem;
   margin-top: 3rem;
   border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+}
+
+/* CTA button improvements */
+#cta-section .btn {
+  background-color: #004080;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 0.75rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cta-section .btn:hover,
+#cta-section .btn:focus {
+  background-color: #002b4d;
+  box-shadow: 0 6px 18px rgba(0, 43, 77, 0.6);
+  color: #fff;
+  text-decoration: none;
+  outline: none;
 }
 
 /* Responsive tweaks for small devices */
@@ -150,9 +177,9 @@ body.about-page {
     font-size: 0.95rem;
   }
 
-  /* Adjust margin on image for smaller screens */
   .about-header-img {
-    margin: 1rem auto 1.5rem auto;
+    max-width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
