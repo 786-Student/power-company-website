@@ -1,12 +1,12 @@
 /* ===== About Page Specific Styles ===== */
 
-/* Ensure header/footer full width and background color spans entire viewport */
+/* Ensure header/footer span entire width */
 .main-header, .main-footer {
-  width: 100vw; /* full viewport width */
+  width: 100vw;
   padding-left: 0;
   padding-right: 0;
   margin: 0;
-  background-color: var(--jet-blue); /* match your main header/footer color */
+  background-color: var(--jet-blue);
   position: relative;
   left: 50%;
   right: 50%;
@@ -15,29 +15,28 @@
   z-index: 1000;
 }
 
-/* Keep container padding inside header/footer for content alignment */
 .main-header .container,
 .main-footer .container {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* About page body background and font tweaks */
+/* Body styling for About page */
 body.about-page {
-  background-color: #e8effb; /* slightly deeper subtle off-white */
-  color: #222; /* slightly darker text for readability */
+  background-color: #e8effb;
+  color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.55;
 }
 
-/* Main content container override for about page if needed */
+/* Main container */
 .about-page main.container {
-  max-width: 1140px; /* Bootstrap lg container width */
+  max-width: 1140px;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-/* Section headline styling */
+/* Section headlines */
 .section-headline {
   font-size: 1.9rem;
   font-weight: 700;
@@ -47,14 +46,14 @@ body.about-page {
   padding-bottom: 0.3rem;
 }
 
-/* Highlighted text spans */
+/* Highlighted text */
 .highlight {
   color: var(--accent-blue);
   font-weight: 600;
 }
 
-/* About section boxes */
-.about-section > div {
+/* Article boxes */
+.about-section > article {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
@@ -63,25 +62,11 @@ body.about-page {
   transition: box-shadow 0.3s ease;
 }
 
-.about-section > div:hover {
+.about-section > article:hover {
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
 }
 
-/* New: About section articles styled consistently */
-.about-section article {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  transition: box-shadow 0.3s ease;
-}
-
-.about-section article:hover {
-  box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
-}
-
-/* Mission box with subtle different background */
+/* Mission box */
 .mission-box {
   background-color: #e8f0fe;
   border-left: 6px solid var(--accent-blue);
@@ -90,45 +75,19 @@ body.about-page {
   margin-bottom: 2.5rem;
 }
 
-/* Icons in headlines */
+/* Headline icons */
 .about-section h2 i,
 .about-section h3 i {
-  color: #ffb700; /* warm yellow for icons */
+  color: #ffb700;
 }
 
-/* Text primary color adjustments */
+/* .text-primary overrides */
 .text-primary {
   color: var(--accent-blue) !important;
   font-weight: 700;
 }
 
-/* Core principles section with gradient background and shadows */
-.core-principles-section,
-.p-4.bg-primary.text-white.rounded.text-center {
-  background: linear-gradient(135deg, #c8ddff 0%, #dff4ff 100%);
-  padding: 2rem 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  color: var(--jet-blue);
-}
-
-.core-principles-section h4,
-.p-4.bg-primary.text-white.rounded.text-center h4 {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--jet-blue);
-}
-
-.core-principles-section p,
-.p-4.bg-primary.text-white.rounded.text-center p {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 0;
-  color: var(--jet-blue);
-}
-
-/* Updated About page header image styles */
+/* About page image styling */
 .about-header-img {
   max-width: 600px;
   width: 100%;
@@ -137,44 +96,83 @@ body.about-page {
   border: 1px solid #ddd;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
   display: block;
-  margin: 0 auto 2.5rem auto; /* centered with margin below */
+  margin: 0 auto 2.5rem auto;
   object-fit: cover;
 }
 
-/* CTA Section overrides to better fit about page */
+/* Core principles section */
+.core-principles-section {
+  background: linear-gradient(135deg, #c8ddff 0%, #dff4ff 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  color: var(--jet-blue);
+  text-align: center;
+}
+
+.core-principles-section h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--jet-blue);
+}
+
+.core-principles-section p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: var(--jet-blue);
+}
+
+/* === CTA Section Matching Index === */
 #cta-section {
   background-color: var(--jet-blue);
   color: white;
   padding: 3rem 1rem;
   margin-top: 3rem;
   border-radius: 8px;
-  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* CTA button improvements */
-#cta-section .btn {
-  background-color: #004080;
+#cta-section h3,
+#cta-section p {
   color: #fff;
+}
+
+#cta-section .btn.btn-light {
+  background-color: #fff;
+  color: var(--jet-blue);
   font-weight: 700;
   border-radius: 50px;
   padding: 0.75rem 2.5rem;
   box-shadow: 0 4px 12px rgba(0, 64, 128, 0.4);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
 }
 
-#cta-section .btn:hover,
-#cta-section .btn:focus {
-  background-color: #002b4d;
-  box-shadow: 0 6px 18px rgba(0, 43, 77, 0.6);
-  color: #fff;
+#cta-section .btn.btn-light:hover,
+#cta-section .btn.btn-light:focus {
+  background-color: #f2f2f2;
+  color: var(--jet-blue);
   text-decoration: none;
-  outline: none;
+  transform: translateY(-2px);
 }
 
-/* Responsive tweaks for small devices */
+/* Pulse animation */
+.pulse-hover {
+  transition: transform 0.3s ease;
+}
+.pulse-hover:hover {
+  animation: pulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to   { transform: scale(1.05); }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 767.98px) {
-  .about-section > div,
-  .about-section article {
+  .about-section > article {
     padding: 1rem 1rem;
   }
 
@@ -186,8 +184,7 @@ body.about-page {
     font-size: 1.5rem;
   }
 
-  .core-principles-section,
-  .p-4.bg-primary.text-white.rounded.text-center {
+  .core-principles-section {
     padding: 1.5rem 1rem;
     font-size: 0.95rem;
   }
@@ -199,8 +196,7 @@ body.about-page {
 }
 
 @media (max-width: 576px) {
-  .about-section > div,
-  .about-section article {
+  .about-section > article {
     padding: 0.75rem 0.75rem;
   }
 
