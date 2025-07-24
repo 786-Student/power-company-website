@@ -66,7 +66,7 @@ body {
 /* ===== Hero Section ===== */
 .about-hero {
   position: relative;
-  background: url('../images/about-hero.jpg') center/cover no-repeat;
+  background: url('../images/HomePage-1.png') center/cover no-repeat;
   height: 60vh;
   display: flex;
   align-items: center;
