@@ -241,7 +241,7 @@ ul.benefits-list li {
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 767.98px) {
   .navbar-nav .nav-item.quote-highlight .nav-link {
-    justify-content: center;  /* Center text on smaller screens */
+    justify-content: flex-start;  /* Center text on smaller screens */
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 1rem;
