@@ -130,9 +130,10 @@ body.about-page {
   color: white;
   padding: 3rem 1rem;
   margin-top: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0; /* Remove or set to 0 for square corners */
+  box-shadow: none; /* Optional: match index.html */
 }
+
 
 #cta-section h3,
 #cta-section p {
