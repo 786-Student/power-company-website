@@ -1,98 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grid Solved – About Us</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-  <body class="about-page">
-   <div id="header-placeholder"></div>
-  <!-- Main Content -->
-  <main class="container py-5">
-    <h1 class="text-center text-dark mb-5">About Us</h1>
-    <section class="about-section">
-     <div class="mission-box shadow-sm mb-5 p-4 rounded">
-  <h2 class="section-headline"><i class="fas fa-bolt me-2 text-warning"></i>Our Mission</h2>
-  <p>
-    At <strong>Grid Solved</strong>, we specialize in the <span class="highlight">supply and strategic procurement</span> of 
-    high-voltage and low-voltage materials for <span class="highlight">utility, industrial, and infrastructure projects</span>. 
-    Our mission is to deliver <strong class="text-primary">reliable, schedule-aligned solutions</strong> that meet the demands of 
-    critical power systems and construction timelines.
-  </p>
-</div>
+/* ===== About Page Specific Styles ===== */
 
+/* Ensure header/footer full width and background color spans entire viewport */
+.main-header, .main-footer {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  background-color: var(--jet-blue); /* match your main header/footer color */
+}
 
-      <div class="mb-4 bg-white p-4 shadow-sm rounded">
-        <h3 class="text-primary fw-semibold"><i class="fas fa-box-open me-2"></i>What We Offer</h3>
-        <p>
-          We provide a wide range of high-quality materials — including transformers, HV/LV breakers, capacitor banks, instrument transformers, switches, steel,
-          transmission line materials, and insulators — all sourced from trusted global manufacturers.
-        </p>
-        <p>
-          But we go far beyond supply. Our team works closely with clients to identify long lead-time materials, coordinate with qualified vendors, and manage
-          procurement with transparency and precision.
-        </p>
-      </div>
+/* Keep container padding inside header/footer for content alignment */
+.main-header .container,
+.main-footer .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-      <div class="mb-4 bg-white p-4 shadow-sm rounded">
-        <h3 class="text-primary fw-semibold"><i class="fas fa-people-carry-box me-2"></i>End-to-End Support</h3>
-        <p>
-          From single orders to large-scale project support, we offer real-time tracking, clear communication, and dedicated service from inquiry to delivery.
-          Our project managers help align material logistics with site activities — reducing delays and improving efficiency.
-        </p>
-      </div>
+/* About page body background and font tweaks */
+body.about-page {
+  background-color: #f9fbff; /* subtle off-white */
+  color: #222; /* slightly darker text for readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-      <div class="mb-4 bg-white p-4 shadow-sm rounded">
-        <h3 class="text-primary fw-semibold"><i class="fas fa-shield-alt me-2"></i>Cybersecurity in Energy</h3>
-        <p>
-          In today’s increasingly connected environment, we support our partners with grid-focused cybersecurity services to protect critical infrastructure and digital assets.
-        </p>
-      </div>
+/* Main content container override for about page if needed */
+.about-page main.container {
+  max-width: 1140px; /* Bootstrap lg container width */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 
-      <div class="p-4 bg-primary text-white rounded text-center">
-        <h4 class="fw-bold">Built on Three Core Principles:</h4>
-        <p class="mb-0"><strong>Reliable materials. Responsive service. Results delivered on schedule.</strong></p>
-      </div>
-    </section>
-  </main>
+/* Section headline styling */
+.section-headline {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--jet-blue);
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: 0.3rem;
+}
 
-  <section id="cta-section" class="text-center fade-slide-up">
-    <div class="container">
-      <h3 class="mb-3">Ready to Power Your Next Project?</h3>
-      <p class="lead mb-4">Connect with us — we’ll handle the rest.</p>
-      <a href="contact.html" class="btn btn-light btn-lg pulse-hover">Contact Us</a>
-    </div>
-  </section>
-  <div id="footer-placeholder"></div>
+/* Highlighted text spans */
+.highlight {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
 
-  <!-- Animation Trigger -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const animatedEl = document.querySelector(".fade-slide-up");
+/* About section boxes */
+.about-section > div {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
+.about-section > div:hover {
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
+}
 
-      if (animatedEl) {
-        observer.observe(animatedEl);
-      }
-    });
-  </script>
-  <script src="js/common.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+/* Mission box with subtle different background */
+.mission-box {
+  background-color: #e8f0fe;
+  border-left: 6px solid var(--accent-blue);
+  padding-left: 1.5rem;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.05);
+  margin-bottom: 2.5rem;
+}
+
+/* Icons in headlines */
+.about-section h2 i,
+.about-section h3 i {
+  color: #ffb700; /* warm yellow for icons */
+}
+
+/* Text primary color adjustments */
+.text-primary {
+  color: var(--accent-blue) !important;
+  font-weight: 700;
+}
+
+/* Core principles section with gradient background and shadows */
+.core-principles-section,
+.p-4.bg-primary.text-white.rounded.text-center {
+  background: linear-gradient(135deg, #e0f0ff 0%, #f7fbff 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: var(--jet-blue);
+}
+
+.core-principles-section h4,
+.p-4.bg-primary.text-white.rounded.text-center h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--jet-blue);
+}
+
+.core-principles-section p,
+.p-4.bg-primary.text-white.rounded.text-center p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: var(--jet-blue);
+}
+
+/* CTA Section overrides to better fit about page */
+#cta-section {
+  background-color: var(--jet-blue);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+}
+
+/* Responsive tweaks for small devices */
+@media (max-width: 767.98px) {
+  .about-section > div {
+    padding: 1rem 1rem;
+  }
+
+  .mission-box {
+    padding-left: 1rem;
+  }
+
+  .section-headline {
+    font-size: 1.5rem;
+  }
+
+  .core-principles-section,
+  .p-4.bg-primary.text-white.rounded.text-center {
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section > div {
+    padding: 0.75rem 0.75rem;
+  }
+
+  .section-headline {
+    font-size: 1.25rem;
+  }
+}
