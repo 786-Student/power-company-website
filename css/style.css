@@ -240,8 +240,24 @@ ul.benefits-list li {
 
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 767.98px) {
+  /* Left align the collapsed navbar container */
+  #navbarNav {
+    justify-content: flex-start !important;
+  }
+
+  /* Make nav links fill width for proper text alignment */
+  #navbarNav .nav-link {
+    width: 100%;
+  }
+
+  /* Add some padding to nav items for spacing */
+  .navbar-nav .nav-item {
+    padding-left: 0.5rem;
+  }
+
+  /* Align the quote-highlight nav link text left */
   .navbar-nav .nav-item.quote-highlight .nav-link {
-    justify-content: flex-start;  /* Center text on smaller screens */
+    justify-content: flex-start;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 1rem;
