@@ -144,7 +144,7 @@ body.about-page {
   background-color: #fff;
   color: var(--jet-blue);
   font-weight: 700;
-  border-radius: 0.25rem; /* ✅ Standard Bootstrap corner radius */
+  border-radius: 0; 
   padding: 0.75rem 2.5rem;
   box-shadow: 0 4px 12px rgba(0, 64, 128, 0.4);
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
