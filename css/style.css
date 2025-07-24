@@ -15,133 +15,48 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--light-gray);
   color: var(--text-dark);
   line-height: 1.6;
-}
-
-/* ===== Header / Navbar ===== */
-.main-header {
-  background-color: var(--jet-blue);
-}
-
-.navbar-brand .logo {
-  height: 45px;
-  width: auto;
-}
-
-.navbar-nav .nav-link {
-  color: white;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
-  color: var(--link-hover);
-}
-
-.navbar-nav .nav-link.quote-highlight {
-  background-color: #ffffff;
-  color: var(--jet-blue);
-  border-radius: 4px;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-}
-
-.navbar-nav .nav-link.quote-highlight:hover {
-  background-color: #f4f4f4;
-  color: var(--jet-blue);
-}
-
-/* ===== Main Headings ===== */
-main h1,
-.section-title {
-  color: var(--jet-blue);
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-main h3 {
-  color: var(--accent-blue);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
-}
-
-/* ===== Paragraphs & Lists ===== */
-main p {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-}
-
-ul.benefits-list {
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-ul.benefits-list li {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-/* ===== Service Cards ===== */
-.service-section {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-.service-section h5 {
-  color: var(--accent-blue);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-/* ===== About Page Mission Box ===== */
-.mission-box {
-  background-color: #fefefe;
-  border-left: 5px solid var(--accent-blue);
-  padding: 2rem;
-  background-image: linear-gradient(to right, #ffffff, #f5f9ff);
-}
-
-.mission-box .section-headline {
-  color: var(--jet-blue);
-  font-weight: 700;
-  font-size: 1.75rem;
-}
-
-.mission-box .highlight {
-  background-color: #e6f0ff;
-  padding: 0 4px;
-  border-radius: 4px;
-  font-weight: 600;
-  color: #004085;
-}
-
-.mission-box p {
-  font-size: 1.1rem;
-  line-height: 1.7;
 }
 
 /* ===== Hero Section ===== */
 .animated-hero {
   background: url('../images/HomePage-1.png') no-repeat center center/cover;
   position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 0;
-  animation: bgMove 30s ease-in-out infinite alternate;
   color: white;
+  text-align: center;
+  animation: bgMove 30s ease-in-out infinite alternate;
+}
+
+.animated-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55); /* Overlay for contrast */
+  z-index: 1;
+}
+
+.animated-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 850px;
 }
 
 @keyframes bgMove {
@@ -154,11 +69,21 @@ ul.benefits-list li {
 }
 
 /* ===== Headline Animation ===== */
-.headline-animated {
+.headline-animated,
+.subheadline-animated {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeSlideUp 1.5s ease-out forwards;
-  animation-delay: 0.3s;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.headline-animated {
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.subheadline-animated {
+  animation: fadeSlideUp 1.3s ease-out forwards;
+  animation-delay: 1s;
 }
 
 @keyframes fadeSlideUp {
@@ -168,7 +93,7 @@ ul.benefits-list li {
   }
 }
 
-/* ===== Call to Action Section ===== */
+/* ===== CTA Section ===== */
 #cta-section {
   background-color: var(--jet-blue);
   color: white;
@@ -210,22 +135,32 @@ ul.benefits-list li {
   color: #aaa;
 }
 
-/* ===== Bottom Nav Links ===== */
-.bottom-nav a {
-  color: var(--accent-blue);
-  margin: 0 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
+/* ===== List Section ===== */
+main h1,
+.section-title {
+  color: var(--jet-blue);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.bottom-nav a:hover {
-  color: #fff;
-  background-color: var(--accent-blue);
-  padding: 4px 8px;
-  border-radius: 4px;
+main p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
 }
 
-/* ===== Animations ===== */
+ul.benefits-list {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+ul.benefits-list li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* ===== Animation Triggers ===== */
 .fade-slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -237,6 +172,7 @@ ul.benefits-list li {
   transform: translateY(0);
 }
 
+/* ===== Button Pulse Effect ===== */
 .pulse-hover {
   transition: transform 0.3s ease;
 }
@@ -274,7 +210,15 @@ ul.benefits-list li {
     font-size: 1.5rem;
   }
 
-  .service-section {
+  .hero-text-box {
     padding: 1.5rem;
+  }
+
+  .headline-animated {
+    font-size: 1.4rem;
+  }
+
+  .subheadline-animated {
+    font-size: 1.1rem;
   }
 }
