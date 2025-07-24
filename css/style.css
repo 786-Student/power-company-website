@@ -6,6 +6,7 @@
   --text-dark: #333;
   --accent-blue: #004085;
   --overlay-dark: rgba(0, 0, 0, 0.5);
+  --white: #ffffff;
 }
 
 /* ===== Reset & Base Styles ===== */
@@ -44,7 +45,7 @@ body {
 }
 
 .navbar-nav .nav-link.quote-highlight {
-  background-color: #ffffff;
+  background-color: var(--white);
   color: var(--jet-blue);
   border-radius: 4px;
   font-weight: bold;
@@ -52,88 +53,8 @@ body {
 }
 
 .navbar-nav .nav-link.quote-highlight:hover {
-  background-color: #f4f4f4;
+  background-color: var(--light-gray);
   color: var(--jet-blue);
-}
-
-/* ===== Main Headings ===== */
-main h1,
-.section-title {
-  color: var(--jet-blue);
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-main h3 {
-  color: var(--accent-blue);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
-}
-
-/* ===== Paragraphs & Lists ===== */
-main p {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-}
-
-ul.benefits-list {
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-ul.benefits-list li {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-/* ===== Service Cards ===== */
-.service-section {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-.service-section h5 {
-  color: var(--accent-blue);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-/* ===== About Page Mission Box ===== */
-.mission-box {
-  background-color: #fefefe;
-  border-left: 5px solid var(--accent-blue);
-  padding: 2rem;
-  background-image: linear-gradient(to right, #ffffff, #f5f9ff);
-}
-
-.mission-box .section-headline {
-  color: var(--jet-blue);
-  font-weight: 700;
-  font-size: 1.75rem;
-}
-
-.mission-box .highlight {
-  background-color: #e6f0ff;
-  padding: 0 4px;
-  border-radius: 4px;
-  font-weight: 600;
-  color: #004085;
-}
-
-.mission-box p {
-  font-size: 1.1rem;
-  line-height: 1.7;
 }
 
 /* ===== Hero Section ===== */
@@ -146,7 +67,6 @@ ul.benefits-list li {
   justify-content: center;
   text-align: center;
   color: white;
-  z-index: 0;
   animation: bgMove 30s ease-in-out infinite alternate;
 }
 
@@ -202,6 +122,94 @@ ul.benefits-list li {
   }
 }
 
+/* ===== Main Content Headings ===== */
+main h1,
+.section-title {
+  color: var(--jet-blue);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main h2.headline {
+  color: var(--accent-blue);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+main h3 {
+  color: var(--accent-blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+main p.lead {
+  font-size: 1.15rem;
+}
+
+/* ===== List Style in Highlights ===== */
+ul.list-group-flush li {
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+}
+
+ul.list-group-flush li:last-child {
+  border-bottom: none;
+}
+
+/* ===== Service Cards ===== */
+.service-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-section h5 {
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Mission Box ===== */
+.mission-box {
+  background-color: #fefefe;
+  border-left: 5px solid var(--accent-blue);
+  padding: 2rem;
+  background-image: linear-gradient(to right, #ffffff, #f5f9ff);
+}
+
+.mission-box .section-headline {
+  color: var(--jet-blue);
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.mission-box .highlight {
+  background-color: #e6f0ff;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #004085;
+}
+
+.mission-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 /* ===== Call to Action Section ===== */
 #cta-section {
   background-color: var(--jet-blue);
@@ -244,7 +252,16 @@ ul.benefits-list li {
   color: #aaa;
 }
 
-/* ===== Bottom Nav Links ===== */
+/* ===== Contact Info + Bottom Nav ===== */
+.contact-info-nav {
+  font-size: 0.95rem;
+}
+
+.contact-info-nav .info h5 {
+  color: var(--jet-blue);
+  font-weight: 600;
+}
+
 .bottom-nav a {
   color: var(--accent-blue);
   margin: 0 0.5rem;
@@ -253,7 +270,7 @@ ul.benefits-list li {
 }
 
 .bottom-nav a:hover {
-  color: #fff;
+  color: white;
   background-color: var(--accent-blue);
   padding: 4px 8px;
   border-radius: 4px;
@@ -318,5 +335,10 @@ ul.benefits-list li {
 
   .animated-hero p {
     font-size: 1.1rem;
+  }
+
+  ul.list-group-flush li {
+    font-size: 1rem;
+    padding: 0.6rem 0.75rem;
   }
 }
