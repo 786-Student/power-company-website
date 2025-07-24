@@ -1,15 +1,10 @@
-/* ===== Root Variables ===== */
+/* ===== Root Colors ===== */
 :root {
   --jet-blue: #001f3f;
-  --accent-blue: #004085;
   --link-hover: #3399ff;
-  --light-gray: #f4f9fc;
+  --light-gray: #f4f4f4;
   --text-dark: #333;
-  --overlay-dark: rgba(0, 0, 0, 0.6);
-  --white: #ffffff;
-  --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
-  --shadow-strong: 0 6px 20px rgba(0, 0, 0, 0.08);
-  --border-radius: 8px;
+  --accent-blue: #004085;
 }
 
 /* ===== Reset & Base Styles ===== */
@@ -18,242 +13,268 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: var(--light-gray);
   color: var(--text-dark);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===== Header / Navbar ===== */
 .main-header {
   background-color: var(--jet-blue);
 }
+
 .navbar-brand .logo {
   height: 45px;
+  width: auto;
 }
+
 .navbar-nav .nav-link {
-  color: var(--white);
+  color: white;
   font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
 }
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link.active {
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
   color: var(--link-hover);
 }
+
 .navbar-nav .nav-link.quote-highlight {
-  background-color: var(--white);
+  background-color: #ffffff;
   color: var(--jet-blue);
-  border-radius: var(--border-radius);
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link.quote-highlight:hover {
+  background-color: #f4f4f4;
+  color: var(--jet-blue);
+}
+
+/* ===== Main Headings ===== */
+main h1,
+.section-title {
+  color: var(--jet-blue);
+  font-size: 2rem;
   font-weight: 700;
-  padding: 0.6rem 1.2rem;
-  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.navbar-nav .nav-link.quote-highlight:hover,
-.navbar-nav .nav-link.quote-highlight:focus {
-  background-color: #e1e9f5;
+
+main h3 {
+  color: var(--accent-blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
 }
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link.quote-highlight:focus {
-  outline: 2px solid var(--link-hover);
-  outline-offset: 2px;
+
+/* ===== Paragraphs & Lists ===== */
+main p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+ul.benefits-list {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+ul.benefits-list li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* ===== Service Cards ===== */
+.service-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-section h5 {
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== About Page Mission Box ===== */
+.mission-box {
+  background-color: #fefefe;
+  border-left: 5px solid var(--accent-blue);
+  padding: 2rem;
+  background-image: linear-gradient(to right, #ffffff, #f5f9ff);
+}
+
+.mission-box .section-headline {
+  color: var(--jet-blue);
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.mission-box .highlight {
+  background-color: #e6f0ff;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #004085;
+}
+
+.mission-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* ===== Hero Section ===== */
-.about-hero {
+.animated-hero {
+  background: url('../images/HomePage-1.png') no-repeat center center/cover;
   position: relative;
-  background: url('../images/HomePage-1.png') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.about-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--overlay-dark);
-  z-index: 1;
-}
-.about-hero .container {
-  position: relative;
-  z-index: 2;
-}
-.about-hero h1 {
-  color: var(--white);
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.about-hero p.lead {
-  color: var(--white);
-  font-size: 1.25rem;
+  z-index: 0;
+  animation: bgMove 30s ease-in-out infinite alternate;
+  color: white;
 }
 
-/* ===== Scroll-based Animations ===== */
+@keyframes bgMove {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: center 10%;
+  }
+}
+
+/* ===== Headline Animation ===== */
+.headline-animated {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Call to Action Section ===== */
+#cta-section {
+  background-color: var(--jet-blue);
+  color: white;
+  padding: 3rem 1rem;
+}
+
+#cta-section h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+#cta-section .btn {
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+  background-color: var(--jet-blue);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ===== Bottom Nav Links ===== */
+.bottom-nav a {
+  color: var(--accent-blue);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bottom-nav a:hover {
+  color: #fff;
+  background-color: var(--accent-blue);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ===== Animations ===== */
 .fade-slide-up {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .fade-slide-up.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ===== Content Sections ===== */
-.about-section {
-  padding: 3rem 0;
-  max-width: 900px;
-  margin: 0 auto;
+.pulse-hover {
+  transition: transform 0.3s ease;
 }
 
-/* Mission Box */
-.mission-box {
-  background-color: var(--white);
-  border-left: 5px solid var(--accent-blue);
-  box-shadow: var(--shadow-light);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 3rem;
-}
-.section-headline {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.highlight {
-  background-color: rgba(0, 64, 128, 0.1);
-  padding: 0 4px;
-  border-radius: 4px;
+.pulse-hover:hover {
+  animation: pulse 0.6s ease-in-out infinite alternate;
 }
 
-/* Alternating content rows */
-.row.align-items-center {
-  margin-bottom: 2rem;
-}
-.row.align-items-center img {
-  max-width: 100%;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-}
-.row.align-items-center h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* ===== Principle Notice Box ===== */
-.about-section .bg-primary {
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  margin: 2rem 0;
-}
-.about-section .bg-primary h4 {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-.about-section .bg-primary p {
-  font-size: 1.1rem;
-}
-
-/* ===== Mid-Page CTA ===== */
-button.btn-primary,
-a.btn-primary {
-  background-color: var(--accent-blue);
-  color: var(--white);
-  font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-}
-button.btn-primary:hover,
-a.btn-primary:hover,
-button.btn-primary:focus,
-a.btn-primary:focus {
-  background-color: var(--jet-blue);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-strong);
-}
-button.btn-primary:focus,
-a.btn-primary:focus {
-  outline: 2px solid var(--link-hover);
-  outline-offset: 2px;
-}
-
-/* ===== Footer / Contact Info ===== */
-.contact-info-nav {
-  background-color: var(--white);
-  padding: 2rem 0;
-}
-.contact-info-nav .info h5 {
-  color: var(--jet-blue);
-  font-weight: 600;
-}
-.bottom-nav a {
-  color: var(--accent-blue);
-  margin: 0 0.5rem;
-  padding: 4px 8px;
-  border-radius: var(--border-radius);
-  transition: background-color 0.3s, color 0.3s;
-}
-.bottom-nav a:hover,
-.bottom-nav a:focus {
-  background-color: var(--accent-blue);
-  color: var(--white);
-}
-.bottom-nav a:focus {
-  outline: 2px solid var(--link-hover);
-  outline-offset: 2px;
-}
-.main-footer {
-  background-color: var(--jet-blue);
-  color: var(--white);
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
-}
-.footer-links a {
-  color: #ccc;
-  margin: 0 0.75rem;
-  transition: color 0.3s;
-}
-.footer-links a:hover,
-.footer-links a:focus {
-  color: var(--white);
-}
-.footer-note {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-/* ===== Icons Accessibility ===== */
-.fas[aria-hidden="true"] {
-  margin-right: 0.5rem;
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
 
 /* ===== Responsive Adjustments ===== */
-@media (max-width: 768px) {
-  .about-hero { height: 50vh; }
-  .about-hero h1 { font-size: 2rem; }
-  .about-hero p.lead { font-size: 1.1rem; }
-  .navbar-nav .nav-link { padding: 0.6rem 1rem; }
-}
 @media (max-width: 576px) {
-  .pad-mobile {
-    padding: 0 1rem;
+  .navbar-brand span {
+    font-size: 1.25rem;
   }
-  .mission-box, .row.align-items-center > div {
-    padding: 1.5rem 0;
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  .row.align-items-center img {
-    margin-top: 1rem;
+
+  #cta-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .service-section {
+    padding: 1.5rem;
   }
 }
