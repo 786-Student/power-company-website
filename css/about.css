@@ -67,6 +67,20 @@ body.about-page {
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
 }
 
+/* New: About section articles styled consistently */
+.about-section article {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-section article:hover {
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
+}
+
 /* Mission box with subtle different background */
 .mission-box {
   background-color: #e8f0fe;
@@ -159,7 +173,8 @@ body.about-page {
 
 /* Responsive tweaks for small devices */
 @media (max-width: 767.98px) {
-  .about-section > div {
+  .about-section > div,
+  .about-section article {
     padding: 1rem 1rem;
   }
 
@@ -184,7 +199,8 @@ body.about-page {
 }
 
 @media (max-width: 576px) {
-  .about-section > div {
+  .about-section > div,
+  .about-section article {
     padding: 0.75rem 0.75rem;
   }
 
