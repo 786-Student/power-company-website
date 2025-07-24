@@ -5,6 +5,8 @@
   --light-gray: #f4f4f4;
   --text-dark: #333;
   --accent-blue: #004085;
+  --quote-bg: #004085; /* Slightly lighter blue for quote button */
+  --quote-bg-hover: #003366; /* Darker blue on hover */
 }
 
 /* ===== Reset & Base Styles ===== */
@@ -31,11 +33,31 @@
 .navbar-dark .navbar-nav .nav-link.active {
   color: var(--link-hover);
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--light-gray);
   color: var(--text-dark);
   line-height: 1.6;
+}
+
+/* ===== "Get a Quote" Navigation Tab Styling ===== */
+.navbar-nav .nav-item.quote-highlight {
+  background-color: var(--quote-bg);
+  border-radius: 5px;
+  font-weight: 700;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item.quote-highlight .nav-link {
+  color: white !important;
+  padding: 0.5rem 1.25rem;
+}
+
+.navbar-nav .nav-item.quote-highlight:hover {
+  background-color: var(--quote-bg-hover);
+  color: white !important;
 }
 
 /* ===== Hero Section ===== */
