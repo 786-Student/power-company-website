@@ -1,12 +1,17 @@
-/* ===== Root Colors ===== */
+/* ===== Root Colors & Variables ===== */
 :root {
   --jet-blue: #001f3f;
   --link-hover: #3399ff;
   --light-gray: #f4f4f4;
   --text-dark: #333;
   --accent-blue: #004085;
-  --overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay-dark: rgba(0, 0, 0, 0.6); /* Darker for better contrast */
   --white: #ffffff;
+
+  /* Additional variables */
+  --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-strong: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 8px;
 }
 
 /* ===== Reset & Base Styles ===== */
@@ -17,10 +22,12 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--light-gray);
   color: var(--text-dark);
-  line-height: 1.6;
+  line-height: 1.75; /* increased for readability */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===== Header / Navbar ===== */
@@ -36,25 +43,42 @@ body {
 .navbar-nav .nav-link {
   color: white;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem; /* slightly bigger clickable area */
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
   color: var(--link-hover);
+  outline: none;
+}
+
+.navbar-nav .nav-link:focus {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
 }
 
 .navbar-nav .nav-link.quote-highlight {
   background-color: var(--white);
   color: var(--jet-blue);
-  border-radius: 4px;
-  font-weight: bold;
+  border-radius: var(--border-radius);
+  font-weight: 700;
   padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-nav .nav-link.quote-highlight:hover {
+.navbar-nav .nav-link.quote-highlight:hover,
+.navbar-nav .nav-link.quote-highlight:focus {
   background-color: var(--light-gray);
   color: var(--jet-blue);
+  outline: none;
+}
+
+.navbar-nav .nav-link.quote-highlight:focus {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
 }
 
 /* ===== Hero Section ===== */
@@ -66,7 +90,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: var(--white);
   animation: bgMove 30s ease-in-out infinite alternate;
 }
 
@@ -88,7 +112,29 @@ body {
 
 .animated-hero h1,
 .animated-hero p {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+/* Add scroll hint arrow below hero */
+.animated-hero .scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--white);
+  opacity: 0.7;
+  animation: bounce 2.5s infinite;
+  z-index: 2;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(15px);
+  }
 }
 
 /* ===== Hero Animations ===== */
@@ -126,10 +172,11 @@ body {
 main h1,
 .section-title {
   color: var(--jet-blue);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main h2.headline {
@@ -146,17 +193,34 @@ main h3 {
 }
 
 main p.lead {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== List Style in Highlights ===== */
 ul.list-group-flush li {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 500;
   padding: 0.75rem 1rem;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #eaeaea;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Add checkmark before each list item */
+ul.list-group-flush li::before {
+  content: '✔';
+  color: var(--accent-blue);
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 ul.list-group-flush li:last-child {
@@ -165,16 +229,20 @@ ul.list-group-flush li:last-child {
 
 /* ===== Service Cards ===== */
 .service-section {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 280px; /* consistent card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .service-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-strong);
 }
 
 .service-section h5 {
@@ -189,6 +257,7 @@ ul.list-group-flush li:last-child {
   border-left: 5px solid var(--accent-blue);
   padding: 2rem;
   background-image: linear-gradient(to right, #ffffff, #f5f9ff);
+  margin-bottom: 2rem;
 }
 
 .mission-box .section-headline {
@@ -202,19 +271,20 @@ ul.list-group-flush li:last-child {
   padding: 0 4px;
   border-radius: 4px;
   font-weight: 600;
-  color: #004085;
+  color: var(--accent-blue);
 }
 
 .mission-box p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
 /* ===== Call to Action Section ===== */
 #cta-section {
   background-color: var(--jet-blue);
-  color: white;
+  color: var(--white);
   padding: 3rem 1rem;
+  transition: background-color 0.3s ease;
 }
 
 #cta-section h3 {
@@ -223,28 +293,54 @@ ul.list-group-flush li:last-child {
 }
 
 #cta-section .btn {
-  font-weight: bold;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 64, 128, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  color: var(--jet-blue);
+}
+
+#cta-section .btn:hover,
+#cta-section .btn:focus {
+  box-shadow: 0 8px 16px rgba(0, 64, 128, 0.35);
+  transform: translateY(-2px);
+  outline: none;
+  color: var(--jet-blue);
+}
+
+#cta-section .btn:focus {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
 }
 
 /* ===== Footer ===== */
 .main-footer {
   background-color: var(--jet-blue);
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 2rem 1rem;
+  font-size: 0.95rem;
 }
 
 .footer-links a {
   color: #ccc;
   margin: 0 1rem;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: white;
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--white);
   text-decoration: underline;
+  outline: none;
+}
+
+.footer-links a:focus {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
 }
 
 .footer-note {
@@ -255,10 +351,20 @@ ul.list-group-flush li:last-child {
 /* ===== Contact Info + Bottom Nav ===== */
 .contact-info-nav {
   font-size: 0.95rem;
+  background-color: var(--white);
 }
 
 .contact-info-nav .info h5 {
   color: var(--jet-blue);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-nav .info p {
+  margin-bottom: 0;
+}
+
+.bottom-nav {
   font-weight: 600;
 }
 
@@ -266,14 +372,22 @@ ul.list-group-flush li:last-child {
   color: var(--accent-blue);
   margin: 0 0.5rem;
   text-decoration: none;
-  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
-.bottom-nav a:hover {
-  color: white;
+.bottom-nav a:hover,
+.bottom-nav a:focus {
+  color: var(--white);
   background-color: var(--accent-blue);
-  padding: 4px 8px;
-  border-radius: 4px;
+  outline: none;
+}
+
+.bottom-nav a:focus {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
 }
 
 /* ===== Animations ===== */
@@ -290,10 +404,11 @@ ul.list-group-flush li:last-child {
 
 .pulse-hover {
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .pulse-hover:hover {
-  animation: pulse 0.6s ease-in-out infinite alternate;
+  animation: pulse 0.6s ease-in-out 2 forwards;
 }
 
 @keyframes pulse {
@@ -340,5 +455,11 @@ ul.list-group-flush li:last-child {
   ul.list-group-flush li {
     font-size: 1rem;
     padding: 0.6rem 0.75rem;
+    padding-left: 1.75rem;
+  }
+
+  ul.list-group-flush li::before {
+    left: 0.5rem;
+    font-size: 1rem;
   }
 }
