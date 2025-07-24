@@ -1,0 +1,152 @@
+/* ===== Services Page Specific Styles ===== */
+
+/* Full-width header and footer setup */
+.main-header, .main-footer {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: var(--jet-blue);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: 1000;
+}
+
+.main-header .container,
+.main-footer .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Body for Services page */
+body.services-page {
+  background-color: #e8effb;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main layout */
+.services-page main.container {
+  max-width: 1140px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Section title */
+.section-headline {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--jet-blue);
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: 0.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Service article cards */
+.services-list > article {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.services-list > article:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.services-list h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+.services-list p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+/* Optional icon style */
+.services-list h3 i {
+  color: #ffb700;
+  margin-right: 0.5rem;
+}
+
+/* Call to Action Section (reuse from About/Home) */
+#cta-section {
+  background-color: var(--jet-blue);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+#cta-section h3,
+#cta-section p {
+  color: #fff;
+}
+
+#cta-section .btn.btn-light {
+  background-color: #fff;
+  color: var(--jet-blue);
+  font-weight: 700;
+  border-radius: 0; /* flat button */
+  padding: 0.75rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#cta-section .btn.btn-light:hover,
+#cta-section .btn.btn-light:focus {
+  background-color: #f2f2f2;
+  color: var(--jet-blue);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Pulse animation reused */
+.pulse-hover {
+  transition: transform 0.3s ease;
+}
+.pulse-hover:hover {
+  animation: pulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .services-list > article {
+    padding: 1rem 1rem;
+  }
+
+  .section-headline {
+    font-size: 1.5rem;
+  }
+
+  #cta-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-list > article {
+    padding: 0.75rem;
+  }
+
+  .section-headline {
+    font-size: 1.25rem;
+  }
+}
