@@ -13,6 +13,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+.logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  max-height: 8vh;
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
