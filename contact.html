@@ -9,28 +9,7 @@
 </head>
 <body>
 
-  <!-- Sticky Header -->
-  <header class="main-header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/GSolved.png" alt="PowerCo Logo" class="logo me-2" />
-        <span class="fs-4 fw-bold">Grid Solved</span>
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="suppliers.html">Suppliers</a></li>
-         
-          <li class="nav-item"><a class="nav-link quote-highlight" href="quote.html">Get a Quote</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+<div id="header-placeholder"></div>
 
   <!-- Main Content -->
   <main class="container py-5">
@@ -57,35 +36,31 @@
     </section>
   </main>
 
-  <!-- Contact Info + Bottom Nav -->
-  <section class="contact-info-nav py-4 bg-light border-top">
-    <div class="container info-container d-flex flex-wrap justify-content-between">
-      <div class="info"><h5>Address</h5><p>5900 Balcones Drive #9299 Austin, TX 78731</p></div>
-      <div class="info"><h5>Hours</h5><p>M-F / 8 AM – 5 PM</p></div>
-      <div class="info"><h5>Phone</h5><p>(832) 778‑3200</p></div>
-      <div class="info"><h5>Email</h5><p><a href="mailto:info@GridSolved.com">info@GridSolved.com</a></p></div>
-    </div>
-    <div class="bottom-nav text-center mt-3">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </section>
+  <div id="footer-placeholder"></div>
 
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="footer-links mb-2">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Notice</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Cookie Settings</a>
-    </div>
-    <p>&copy; 2025 Grid Solved All rights reserved.</p>
-    <p class="footer-note">Minority‑Owned & Women‑Owned Business</p>
-  </footer>
+  <!-- Animation Trigger -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedEl = document.querySelector(".fade-slide-up");
 
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (animatedEl) {
+        observer.observe(animatedEl);
+      }
+    });
+  </script>
+  <script src="js/common.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
