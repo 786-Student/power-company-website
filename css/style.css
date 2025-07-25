@@ -91,11 +91,11 @@ body {
 }
 
 @keyframes backgroundSlideshow {
-  0%    { background-image: url('../images/Slide.PNG'); }
-  25%   { background-image: url('../images/Slide1.PNG'); }
-  50%   { background-image: url('../images/Slide2.PNG'); }
-  75%   { background-image: url('../images/Slide3.PNG'); }
-  100%  { background-image: url('../images/Slide4.PNG'); }
+  0%    { background-image: url('/images/Slide.PNG'); }
+  25%   { background-image: url('/images/Slide1.PNG'); }
+  50%   { background-image: url('/images/Slide2.PNG'); }
+  75%   { background-image: url('/images/Slide3.PNG'); }
+  100%  { background-image: url('/images/Slide4.PNG'); }
 }
 
 /* ===== Hero Section Content ===== */
