@@ -1,5 +1,5 @@
 /* ===== Root Colors ===== */
-:root{
+:root {
   --jet-blue: #001f3f;
   --link-hover: #3399ff;
   --light-gray: #f4f4f4;
@@ -72,30 +72,27 @@ body {
   margin-right: 1rem;
 }
 
-/* ===== Hero Slideshow Background ===== */
+/* ===== Hero Background Crossfade Animation ===== */
 .hero-background-rotator {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-.hero-background-rotator::before {
-  content: "";
+.bg-slide {
   position: absolute;
-  inset: 0;
-  z-index: -1;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
-  animation: backgroundSlideshow 24s infinite;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  z-index: -1;
 }
 
-@keyframes backgroundSlideshow {
-  0%    { background-image: url('images/Slide.PNG'); }
-  25%   { background-image: url('images/Slide1.PNG'); }
-  50%   { background-image: url('images/Slide2.PNG'); }
-  75%   { background-image: url('images/Slide3.PNG'); }
-  100%  { background-image: url('images/Slide4.PNG'); }
+.bg-slide.active {
+  opacity: 1;
 }
 
 /* ===== Hero Section Content ===== */
@@ -105,7 +102,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  z-index: 1;
   color: white;
   text-align: center;
 }
