@@ -23,6 +23,7 @@ body {
   line-height: 1.6;
 }
 
+/* ===== Logo ===== */
 .logo {
   height: 45px;
   width: auto;
@@ -31,6 +32,7 @@ body {
   max-height: 8vh;
 }
 
+/* ===== Navbar ===== */
 .main-header {
   background-color: var(--jet-blue);
 }
@@ -44,7 +46,6 @@ body {
   color: var(--link-hover);
 }
 
-/* ===== "Get a Quote" Navigation Tab Styling ===== */
 .navbar-nav .nav-item.quote-highlight {
   margin-left: 0;
 }
@@ -67,14 +68,38 @@ body {
   color: white !important;
 }
 
-/* Add consistent horizontal spacing between nav items */
 .navbar-nav > .nav-item:not(:last-child) {
   margin-right: 1rem;
 }
 
-/* ===== Hero Section ===== */
+/* ===== Hero Slideshow Background ===== */
+.hero-background-rotator {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-background-rotator::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  animation: backgroundSlideshow 24s infinite;
+}
+
+@keyframes backgroundSlideshow {
+  0%    { background-image: url('../images/Slide.PNG'); }
+  25%   { background-image: url('../images/Slide1.PNG'); }
+  50%   { background-image: url('../images/Slide2.PNG'); }
+  75%   { background-image: url('../images/Slide3.PNG'); }
+  100%  { background-image: url('../images/Slide4.PNG'); }
+}
+
+/* ===== Hero Section Content ===== */
 .animated-hero {
-  background: url('../images/HomePage-1.png') no-repeat center center/cover;
   position: relative;
   height: 100vh;
   display: flex;
@@ -83,7 +108,6 @@ body {
   z-index: 0;
   color: white;
   text-align: center;
-  animation: bgMove 30s ease-in-out infinite alternate;
 }
 
 .animated-hero::before {
@@ -108,15 +132,6 @@ body {
   border-radius: 10px;
   display: inline-block;
   max-width: 850px;
-}
-
-@keyframes bgMove {
-  0% {
-    background-position: center;
-  }
-  100% {
-    background-position: center 10%;
-  }
 }
 
 /* ===== Headline Animation ===== */
@@ -186,7 +201,7 @@ body {
   color: #aaa;
 }
 
-/* ===== List Section ===== */
+/* ===== Content Section ===== */
 main h1,
 .section-title {
   color: var(--jet-blue);
@@ -211,7 +226,7 @@ ul.benefits-list li {
   font-weight: 500;
 }
 
-/* ===== Animation Triggers ===== */
+/* ===== Scroll Animation ===== */
 .fade-slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -223,7 +238,7 @@ ul.benefits-list li {
   transform: translateY(0);
 }
 
-/* ===== Button Pulse Effect ===== */
+/* ===== Button Pulse ===== */
 .pulse-hover {
   transition: transform 0.3s ease;
 }
@@ -241,7 +256,7 @@ ul.benefits-list li {
   }
 }
 
-/* ===== Responsive Adjustments ===== */
+/* ===== Responsive Layouts ===== */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     justify-content: flex-start;
