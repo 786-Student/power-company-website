@@ -126,13 +126,11 @@ body.suppliers-page {
 
 /* ===== Supplier Entry Styling ===== */
 ul.list-group .list-group-item.supplier-section {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  /* Removed 'display: flex' and 'gap' from here */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1.5rem 2rem;
+  /* Padding will be moved to the <a> tag */
   margin-bottom: 1rem;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
   font-size: 1.05rem;
@@ -144,13 +142,31 @@ ul.list-group .list-group-item.supplier-section {
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
 }
 
+/* Supplier Link Styling - UPDATED */
+.supplier-section a {
+  display: flex; /* Use flexbox on the <a> to align logo and text */
+  align-items: center; /* Vertically align items */
+  gap: 12px; /* Space between logo and text */
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 1.5rem 2rem; /* Move padding from .supplier-section to the <a> */
+  width: 100%; /* Make the <a> fill the width of the li */
+  height: 100%; /* Make the <a> fill the height of the li */
+}
+
+.supplier-section a:hover {
+  color: var(--accent-blue);
+}
+
+
 /* Supplier Logos */
+/* Moved margin-right from here to be part of the gap on the <a> tag */
 .supplier-logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
   vertical-align: middle;
-  margin-right: 12px;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.2s ease;
   border-radius: 4px;
@@ -159,17 +175,6 @@ ul.list-group .list-group-item.supplier-section {
 .supplier-logo:hover {
   filter: none;
   transform: scale(1.05);
-}
-
-/* Supplier Link Styling */
-.supplier-section a {
-  color: #222;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.supplier-section a:hover {
-  color: var(--accent-blue);
 }
 
 /* CTA Section */
@@ -229,13 +234,15 @@ a:focus {
     font-size: 1.7rem;
   }
 
-  .supplier-section h5 {
+  /* No longer need h5 specific styling as text is directly in <a> */
+  /* .supplier-section h5 {
     font-size: 1.1rem;
-  }
+  } */
 
-  .supplier-section p {
+  /* No longer need p specific styling */
+  /* .supplier-section p {
     font-size: 0.95rem;
-  }
+  } */
 }
 
 @media (max-width: 767.98px) {
@@ -244,7 +251,7 @@ a:focus {
     padding: 0 1rem;
   }
 
-  .supplier-section {
+  .supplier-section a { /* Apply padding to the a tag */
     padding: 1rem 1rem;
   }
 
@@ -263,7 +270,8 @@ a:focus {
     font-size: 1.3rem;
   }
 
-  .supplier-section h5 {
+  /* No longer need h5 specific styling */
+  /* .supplier-section h5 {
     font-size: 1rem;
-  }
+  } */
 }
