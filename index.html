@@ -10,9 +10,17 @@
 <body>
   <div id="header-placeholder"></div>
 
-  <!-- Hero Section with Rotating Background -->
-  <div class="hero-background-rotator">
-    <section class="animated-hero d-flex align-items-center justify-content-center text-center">
+  <!-- Hero Section with Background Rotation -->
+  <section class="hero-background-rotator">
+    <!-- Background slides -->
+    <div class="bg-slide active" style="background-image: url('images/Slide.PNG');"></div>
+    <div class="bg-slide" style="background-image: url('images/Slide1.PNG');"></div>
+    <div class="bg-slide" style="background-image: url('images/Slide2.PNG');"></div>
+    <div class="bg-slide" style="background-image: url('images/Slide3.PNG');"></div>
+    <div class="bg-slide" style="background-image: url('images/Slide4.PNG');"></div>
+
+    <!-- Hero Content -->
+    <div class="animated-hero d-flex align-items-center justify-content-center text-center">
       <div class="container">
         <div class="hero-text-box">
           <h1 class="display-5 fw-bold headline-animated">
@@ -23,18 +31,19 @@
           </p>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <!-- Main Content -->
   <main class="container py-5">
+    <!-- Highlights -->
     <section class="bg-white p-4 p-md-5 shadow-sm rounded mb-5">
       <h2 class="headline fw-bold mb-4 text-center text-primary">
         ⚡ Powering Your Projects with Precision & Reliability
       </h2>
       <p class="lead text-center mb-4 text-dark">
-        At <strong>Grid Solved</strong>, we specialize in supplying and procuring high‑voltage equipment for utility, industrial, and infrastructure sectors.
-        Our expertise enables on‑schedule delivery of critical equipment, tailored to complex project and operational demands.
+        At <strong>Grid Solved</strong>, we specialize in supplying and procuring high-voltage equipment for utility, industrial, and infrastructure sectors.
+        Our expertise enables on-schedule delivery of critical equipment, tailored to <strong>complex project and operational demands</strong>.
       </p>
       <div class="row">
         <div class="col-lg-10 mx-auto">
@@ -64,6 +73,7 @@
   <!-- Scroll Animation -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Scroll animation
       document.querySelectorAll('.fade-slide-up').forEach(el => {
         const obs = new IntersectionObserver(entries => {
           entries.forEach(e => {
@@ -75,9 +85,19 @@
         }, { threshold: 0.2 });
         obs.observe(el);
       });
+
+      // Hero background image rotation
+      const slides = document.querySelectorAll(".bg-slide");
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 6000); // 6 seconds
     });
   </script>
 
+  <!-- Common Script & Bootstrap -->
   <script src="js/common.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
