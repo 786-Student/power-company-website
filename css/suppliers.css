@@ -1,18 +1,24 @@
 /* ===== Suppliers Page Specific Styles ===== */
 
-/* CSS Variables (if not in a global file, define here) */
+/* CSS Variables */
 :root {
   --jet-blue: #0d2c54;
   --accent-blue: #3a82f7;
   --light-blue-bg: #e8effb;
 }
 
-/* Ensure header/footer span full width */
-.main-header, .main-footer {
+/* Global Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header and Footer Full Width Fix */
+.main-header,
+.main-footer {
   width: 100vw;
+  margin: 0;
   padding-left: 0;
   padding-right: 0;
-  margin: 0;
   background-color: var(--jet-blue);
   position: relative;
   left: 50%;
@@ -28,7 +34,7 @@
   padding-right: 15px;
 }
 
-/* Body and background */
+/* Body Styling */
 body.suppliers-page {
   background-color: var(--light-blue-bg);
   color: #222;
@@ -36,14 +42,14 @@ body.suppliers-page {
   line-height: 1.55;
 }
 
-/* Main container */
+/* Main Container */
 .suppliers-page main.container {
   max-width: 1140px;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-/* Page Title */
+/* Section Title */
 .section-title {
   font-size: 1.9rem;
   font-weight: 700;
@@ -54,7 +60,7 @@ body.suppliers-page {
   text-align: center;
 }
 
-/* Intro paragraph styling */
+/* Intro Paragraph */
 .suppliers-page main p.text-center {
   max-width: 720px;
   margin-left: auto;
@@ -65,13 +71,18 @@ body.suppliers-page {
   margin-bottom: 3rem;
 }
 
-/* ===== A–Z Jump Nav ===== */
+/* ===== Alphabet Nav Bar ===== */
 .alphabet-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 2.5rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--light-blue-bg);
+  padding: 1rem 0;
+  z-index: 999;
 }
 
 .alphabet-nav a {
@@ -84,15 +95,26 @@ body.suppliers-page {
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 36px;
+  text-align: center;
 }
 
 .alphabet-nav a:hover,
 .alphabet-nav a:focus {
   background-color: var(--accent-blue);
   color: #fff;
+  outline: none;
 }
 
-/* ===== Letter Headings ===== */
+/* ===== Letter Group Sections ===== */
+.supplier-letter-group {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
 .letter-heading {
   font-size: 1.6rem;
   font-weight: 700;
@@ -102,22 +124,44 @@ body.suppliers-page {
   padding-bottom: 0.25rem;
 }
 
-/* Supplier section boxes */
-.supplier-section {
-  background-color: white;
+/* ===== Supplier Entry Styling ===== */
+ul.list-group .list-group-item.supplier-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
   padding: 1.5rem 2rem;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
+  font-size: 1.05rem;
+  font-weight: 500;
   transition: box-shadow 0.3s ease;
-  height: 100%;
 }
 
 .supplier-section:hover {
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
 }
 
-/* Ensure supplier links are styled */
+/* Supplier Logos */
+.supplier-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 12px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.2s ease;
+  border-radius: 4px;
+}
+
+.supplier-logo:hover {
+  filter: none;
+  transform: scale(1.05);
+}
+
+/* Supplier Link Styling */
 .supplier-section a {
   color: #222;
   text-decoration: none;
@@ -128,34 +172,12 @@ body.suppliers-page {
   color: var(--accent-blue);
 }
 
-/* Supplier headings in each box */
-.supplier-section h5 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--jet-blue);
-  margin-bottom: 1rem;
-}
-
-/* Text paragraphs inside supplier sections */
-.supplier-section p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Grid layout spacing */
-.row.g-4 {
-  gap: 1.5rem 1.5rem;
-}
-
 /* CTA Section */
 #cta-section {
   background-color: var(--jet-blue);
   color: white;
   padding: 3rem 1rem;
   margin-top: 3rem;
-  border-radius: 0;
-  box-shadow: none;
   text-align: center;
 }
 
@@ -178,14 +200,14 @@ body.suppliers-page {
 #cta-section .btn.btn-light:focus {
   background-color: #f2f2f2;
   color: var(--jet-blue);
-  text-decoration: none;
   transform: translateY(-2px);
 }
 
-/* Pulse animation for button */
+/* Button Animation */
 .pulse-hover {
   transition: transform 0.3s ease;
 }
+
 .pulse-hover:hover {
   animation: pulse 0.6s ease-in-out infinite alternate;
 }
@@ -195,34 +217,13 @@ body.suppliers-page {
   to   { transform: scale(1.05); }
 }
 
-/* Supplier Logo Styling */
-.supplier-logo {
-  width: 40px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 12px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease, transform 0.2s ease;
-  border-radius: 4px;
+/* ===== Accessibility Focus Outline ===== */
+a:focus {
+  outline: 2px dashed var(--accent-blue);
+  outline-offset: 2px;
 }
 
-.supplier-logo:hover {
-  filter: none;
-  transform: scale(1.05);
-}
-
-/* Ensure list-group items are flex aligned */
-ul.list-group .list-group-item.supplier-section {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-/* Responsive Adjustments */
+/* ===== Responsive Tweaks ===== */
 @media (max-width: 991.98px) {
   .section-title {
     font-size: 1.7rem;
