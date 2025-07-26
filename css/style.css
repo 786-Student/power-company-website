@@ -1,5 +1,5 @@
 /* ===== Root Colors ===== */
-:root{
+:root {
   --jet-blue: #001f3f;
   --link-hover: #3399ff;
   --light-gray: #f4f4f4;
@@ -23,23 +23,23 @@ body {
   line-height: 1.6;
 }
 
-/* ===== Navbar & Logo ===== */
-.main-header {
-  background-color: var(--jet-blue);
-}
-
-.navbar-brand {
-  padding: 0 15px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand img {
-  height: 100%;
+/* ===== Logo and Branding ===== */
+.logo {
+  height: 70px;
   width: auto;
   object-fit: contain;
-  max-height: 80px;
+  display: block;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: white;
+}
+
+/* ===== Navbar ===== */
+.main-header {
+  background-color: var(--jet-blue);
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -286,6 +286,14 @@ ul.benefits-list li {
 
 @media (max-width: 576px) {
   .navbar-brand span {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .brand-name {
     font-size: 1.25rem;
   }
 
