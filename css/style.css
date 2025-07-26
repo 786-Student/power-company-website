@@ -1,5 +1,5 @@
 /* ===== Root Colors ===== */
-:root {
+:root{
   --jet-blue: #001f3f;
   --link-hover: #3399ff;
   --light-gray: #f4f4f4;
@@ -23,18 +23,23 @@ body {
   line-height: 1.6;
 }
 
-/* ===== Logo ===== */
-.logo {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  max-height: 8vh;
-}
-
-/* ===== Navbar ===== */
+/* ===== Navbar & Logo ===== */
 .main-header {
   background-color: var(--jet-blue);
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  max-height: 80px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -81,7 +86,8 @@ body {
 
 .bg-slide {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background-size: cover;
