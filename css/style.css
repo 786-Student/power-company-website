@@ -23,23 +23,36 @@ body {
   line-height: 1.6;
 }
 
-/* ===== Logo and Branding ===== */
+/* ===== Logo ===== */
 .logo {
   height: 200px;
   width: auto;
   object-fit: contain;
   display: block;
+  max-width: 100%;
 }
 
-.brand-name {
-  font-size: 1.5rem;
-  line-height: 1;
-  color: white;
+/* Responsive logo scaling */
+@media (max-width: 991.98px) {
+  .logo {
+    height: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    height: 80px;
+  }
 }
 
 /* ===== Navbar ===== */
 .main-header {
   background-color: var(--jet-blue);
+}
+
+.navbar-brand {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -286,14 +299,6 @@ ul.benefits-list li {
 
 @media (max-width: 576px) {
   .navbar-brand span {
-    font-size: 1.25rem;
-  }
-
-  .logo {
-    height: 50px;
-  }
-
-  .brand-name {
     font-size: 1.25rem;
   }
 
