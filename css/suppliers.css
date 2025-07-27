@@ -19,19 +19,25 @@ html {
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  background-color: var(--jet-blue);
+  background-color: var(--jet-blue) !important;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   z-index: 1000;
+  color-scheme: dark;
 }
 
 .main-header .container,
 .main-footer .container {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+/* Ensure logo contrast inside navbar */
+.main-header .navbar-brand img {
+  filter: none !important;
 }
 
 /* Body Styling */
@@ -126,11 +132,9 @@ body.suppliers-page {
 
 /* ===== Supplier Entry Styling ===== */
 ul.list-group .list-group-item.supplier-section {
-  /* Removed 'display: flex' and 'gap' from here */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  /* Padding will be moved to the <a> tag */
   margin-bottom: 1rem;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
   font-size: 1.05rem;
@@ -142,26 +146,24 @@ ul.list-group .list-group-item.supplier-section {
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
 }
 
-/* Supplier Link Styling - UPDATED */
+/* Supplier Link Styling */
 .supplier-section a {
-  display: flex; /* Use flexbox on the <a> to align logo and text */
-  align-items: center; /* Vertically align items */
-  gap: 12px; /* Space between logo and text */
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: #222;
   text-decoration: none;
   transition: color 0.2s ease;
-  padding: 1.5rem 2rem; /* Move padding from .supplier-section to the <a> */
-  width: 100%; /* Make the <a> fill the width of the li */
-  height: 100%; /* Make the <a> fill the height of the li */
+  padding: 1.5rem 2rem;
+  width: 100%;
+  height: 100%;
 }
 
 .supplier-section a:hover {
   color: var(--accent-blue);
 }
 
-
 /* Supplier Logos */
-/* Moved margin-right from here to be part of the gap on the <a> tag */
 .supplier-logo {
   width: 50px;
   height: 50px;
@@ -222,7 +224,7 @@ ul.list-group .list-group-item.supplier-section {
   to   { transform: scale(1.05); }
 }
 
-/* ===== Accessibility Focus Outline ===== */
+/* Accessibility Focus Outline */
 a:focus {
   outline: 2px dashed var(--accent-blue);
   outline-offset: 2px;
@@ -233,16 +235,6 @@ a:focus {
   .section-title {
     font-size: 1.7rem;
   }
-
-  /* No longer need h5 specific styling as text is directly in <a> */
-  /* .supplier-section h5 {
-    font-size: 1.1rem;
-  } */
-
-  /* No longer need p specific styling */
-  /* .supplier-section p {
-    font-size: 0.95rem;
-  } */
 }
 
 @media (max-width: 767.98px) {
@@ -251,7 +243,7 @@ a:focus {
     padding: 0 1rem;
   }
 
-  .supplier-section a { /* Apply padding to the a tag */
+  .supplier-section a {
     padding: 1rem 1rem;
   }
 
@@ -269,9 +261,4 @@ a:focus {
   .letter-heading {
     font-size: 1.3rem;
   }
-
-  /* No longer need h5 specific styling */
-  /* .supplier-section h5 {
-    font-size: 1rem;
-  } */
 }
