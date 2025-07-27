@@ -1,11 +1,6 @@
 /* ===== Suppliers Page Specific Styles ===== */
 
-/* CSS Variables */
-:root {
-  --jet-blue: #0d2c54;
-  --accent-blue: #3a82f7;
-  --light-blue-bg: #e8effb;
-}
+/* Remove :root variable overrides to keep global colors consistent */
 
 /* Global Smooth Scroll */
 html {
@@ -19,7 +14,8 @@ html {
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  background-color: var(--jet-blue) !important;
+  /* Remove forced background-color to prevent override */
+  /* background-color: var(--jet-blue) !important; */
   position: relative;
   left: 50%;
   right: 50%;
@@ -42,7 +38,7 @@ html {
 
 /* Body Styling */
 body.suppliers-page {
-  background-color: var(--light-blue-bg);
+  background-color: #e8effb; /* use a fixed color or your global variable if defined */
   color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.55;
@@ -59,8 +55,8 @@ body.suppliers-page {
 .section-title {
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--jet-blue);
-  border-bottom: 3px solid var(--accent-blue);
+  color: #0d2c54; /* your main jet-blue */
+  border-bottom: 3px solid #3a82f7; /* your accent blue */
   padding-bottom: 0.3rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -86,7 +82,7 @@ body.suppliers-page {
   margin-bottom: 2.5rem;
   position: sticky;
   top: 0;
-  background-color: var(--light-blue-bg);
+  background-color: #e8effb; /* same light blue background */
   padding: 1rem 0;
   z-index: 999;
 }
@@ -94,8 +90,8 @@ body.suppliers-page {
 .alphabet-nav a {
   display: inline-block;
   background-color: #fff;
-  border: 1px solid var(--accent-blue);
-  color: var(--jet-blue);
+  border: 1px solid #3a82f7;
+  color: #0d2c54;
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 0.75rem;
@@ -107,7 +103,7 @@ body.suppliers-page {
 
 .alphabet-nav a:hover,
 .alphabet-nav a:focus {
-  background-color: var(--accent-blue);
+  background-color: #3a82f7;
   color: #fff;
   outline: none;
 }
@@ -124,7 +120,7 @@ body.suppliers-page {
 .letter-heading {
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--jet-blue);
+  color: #0d2c54;
   border-bottom: 2px solid #ccc;
   margin-bottom: 1rem;
   padding-bottom: 0.25rem;
@@ -160,7 +156,7 @@ ul.list-group .list-group-item.supplier-section {
 }
 
 .supplier-section a:hover {
-  color: var(--accent-blue);
+  color: #3a82f7;
 }
 
 /* Supplier Logos - Scoped */
@@ -181,7 +177,7 @@ ul.list-group .list-group-item.supplier-section {
 
 /* CTA Section */
 #cta-section {
-  background-color: var(--jet-blue);
+  background-color: #0d2c54;
   color: white;
   padding: 3rem 1rem;
   margin-top: 3rem;
@@ -195,7 +191,7 @@ ul.list-group .list-group-item.supplier-section {
 
 #cta-section .btn.btn-light {
   background-color: #fff;
-  color: var(--jet-blue);
+  color: #0d2c54;
   font-weight: 700;
   border-radius: 0;
   padding: 0.75rem 2.5rem;
@@ -206,7 +202,7 @@ ul.list-group .list-group-item.supplier-section {
 #cta-section .btn.btn-light:hover,
 #cta-section .btn.btn-light:focus {
   background-color: #f2f2f2;
-  color: var(--jet-blue);
+  color: #0d2c54;
   transform: translateY(-2px);
 }
 
@@ -226,7 +222,7 @@ ul.list-group .list-group-item.supplier-section {
 
 /* Accessibility Focus Outline */
 a:focus {
-  outline: 2px dashed var(--accent-blue);
+  outline: 2px dashed #3a82f7;
   outline-offset: 2px;
 }
 
