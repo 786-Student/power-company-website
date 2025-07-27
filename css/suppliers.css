@@ -5,7 +5,6 @@
   --jet-blue: #0d2c54;
   --accent-blue: #3a82f7;
   --light-blue-bg: #e8effb;
-  --white: #ffffff;
 }
 
 /* Global Smooth Scroll */
@@ -32,7 +31,6 @@ html {
 
 .main-header .container,
 .main-footer .container {
-  max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -44,7 +42,7 @@ html {
 
 /* Body Styling */
 body.suppliers-page {
-  background-color: var(--jet-blue); /* Match other pages */
+  background-color: var(--light-blue-bg);
   color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.55;
@@ -52,12 +50,9 @@ body.suppliers-page {
 
 /* Main Container */
 .suppliers-page main.container {
-  background-color: var(--white);
   max-width: 1140px;
-  margin: 3rem auto;
-  padding: 3rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* Section Title */
@@ -91,10 +86,9 @@ body.suppliers-page {
   margin-bottom: 2.5rem;
   position: sticky;
   top: 0;
-  background-color: var(--white); /* Changed to white for contrast */
+  background-color: var(--light-blue-bg);
   padding: 1rem 0;
   z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .alphabet-nav a {
