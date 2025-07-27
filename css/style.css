@@ -51,10 +51,14 @@ body {
 }
 
 .navbar-brand {
+  padding-left: 0; /* Removed padding-left so logo is flush left */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 0; /* No padding = logo flush left */
-  margin-right: 1rem;
+}
+
+.collapse.navbar-collapse {
+  justify-content: flex-end; /* Nav aligned right */
+  padding-right: 1rem; /* Space on right so nav links don't hit edge */
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -278,6 +282,7 @@ ul.benefits-list li {
 @media (max-width: 991.98px) {
   .navbar-collapse {
     justify-content: flex-start;
+    padding-right: 0; /* remove right padding on smaller screens for full width */
   }
 
   .navbar-collapse .nav-link {
