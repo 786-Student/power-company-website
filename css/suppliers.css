@@ -35,7 +35,7 @@ html {
   padding-right: 15px;
 }
 
-/* Ensure logo contrast inside navbar */
+/* Ensure logo in header is not dimmed */
 .main-header .navbar-brand img {
   filter: none !important;
 }
@@ -163,8 +163,8 @@ ul.list-group .list-group-item.supplier-section {
   color: var(--accent-blue);
 }
 
-/* Supplier Logos */
-.supplier-logo {
+/* Supplier Logos - Scoped */
+.supplier-section .supplier-logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
@@ -174,7 +174,7 @@ ul.list-group .list-group-item.supplier-section {
   border-radius: 4px;
 }
 
-.supplier-logo:hover {
+.supplier-section .supplier-logo:hover {
   filter: none;
   transform: scale(1.05);
 }
