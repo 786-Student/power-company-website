@@ -1,5 +1,5 @@
 /* ===== Root Colors ===== */
-:root{
+:root {
   --jet-blue: #001f3f;
   --link-hover: #3399ff;
   --light-gray: #f4f4f4;
@@ -25,7 +25,7 @@ body {
 
 /* ===== Logo ===== */
 .logo {
-  height: 200px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -53,6 +53,7 @@ body {
 .navbar-brand {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 1rem; /* Ensures slight spacing from the edge */
 }
 
 .navbar-dark .navbar-nav .nav-link {
